@@ -1,18 +1,35 @@
 .contacts {
+  position: relative;
   padding-bottom: 48px;
   @media screen and (min-width: 768px) {
     padding-bottom: 40px;
   }
   @media screen and (min-width: 1280px) {
     padding-bottom: 120px;
-    background-image: url(../images/products/schedule-fon-1280.png),
-      linear-gradient(
-        to bottom,
-        var(--focus-white-color) 22.4%,
-        #fff5f6 22.4%,
-        #fff5f6 100%
-      );
-    background-position: center 141px, center center;
+    background-image: linear-gradient(
+      to bottom,
+      var(--focus-white-color) 13.5%,
+      #fff5f6 13.5%,
+      #fff5f6 100%
+    );
+    &::before {
+      content: '';
+      position: absolute;
+      top: 141px;
+      left: 0;
+      height: 382px;
+      width: 100%;
+      background-image: url(../images/contacts/schedule-fon-1920.png-min.png);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 120px;
+    background-image: linear-gradient(
+      to bottom,
+      var(--focus-white-color) 19.3%,
+      #fff5f6 19.3%,
+      #fff5f6 100%
+    );
   }
   background-image: linear-gradient(
     to bottom,
@@ -32,6 +49,8 @@
     }
     @media screen and (min-width: 1280px) {
       margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
     }
   }
   // .contacts__list

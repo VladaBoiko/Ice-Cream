@@ -1,0 +1,65 @@
+.footer{
+    background-color: #FFF5F6;
+    &__title{
+        color: #FFA5BA;
+        text-transform: uppercase;
+        font-family: "Titan One";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.17;
+    }
+    &__span{
+        letter-spacing: 0.04em;
+        color: #d41443;
+        margin-bottom: 40px;
+        padding-top: 16px;
+        font-size: 34px;
+        line-height: 1.15;
+        display: block;
+    }
+    &__list{
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: right;
+    }
+    &__item:not(:last-child){
+        margin-right: 28.24px;
+    }
+    &__link{
+        width: 32px;
+        height: 32px;
+        background-color: #FFA5BA;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: 50%;
+    }
+    &__text{
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.86;
+    
+        text-align: right;
+        margin-bottom: 40px;
+
+    }
+    &__tel{
+        color: #D41443;
+        text-decoration: none;
+    }
+    &__copyright{
+        padding-top: 16px;
+        padding-bottom: 20px;
+        border-top: 1px solid #E1E1E1;
+        &-text{
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.52;
+            text-align: center;
+
+            color: #907E82;
+
+        }
+
+    }
+}

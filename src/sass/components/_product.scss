@@ -1,6 +1,23 @@
 .products {
   display: flex;
+  justify-content: center;
+  align-items: center;
 
+@media screen and (min-width: 320px), (max-width: 320px) {
+padding-top: 80px;
+padding-bottom: 40px;     
+}
+
+@media screen and (min-width: 768px) {
+padding-top: 40px;
+padding-bottom: 60px;   
+}
+
+@media screen and (min-width: 1280px) {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+}
 }
 
 .products-wrap {
@@ -17,6 +34,7 @@
 position: absolute;
 z-index: 1;
 left: 50%;
+transform: translateX(-50%);
 top: 0;
 font-family: 'Titan One';
 text-align: center;
@@ -129,14 +147,15 @@ background: #FFB8CA;
 position: relative;
 }
 
-// .products__item-ice::before {
-//     contain: "";
-   
-//     display: block;
-//     width: 280px;
-//     height: 280px;
-//     position: absolute;
-// }
+.products__item-ice::before {
+    content: url(../images/products/ice-cream/web/ice-cream-desctop-335-min.webp);
+    display: block;
+    position: absolute;
+    top: -50%;
+left: 50%;
+transform: translateX(-50%);
+
+}
 
 .products__item-coffee {
 background: #F0D1A5;

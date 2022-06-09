@@ -19,6 +19,7 @@
 
 .hero-title {
   max-width: 218px;
+  margin-bottom: 20px;
   font-family: 'Titan One';
   font-weight: 400;
   font-size: 26px;
@@ -31,24 +32,46 @@
 .hero-title_accent {
   font-size: 48px;
   line-height: 0.96;
+  letter-spacing: 0;
   color: var(--focus-pinc-color);
 }
 
 .hero-btn {
-  display: inline-flex;
+  display: inline-block;
+  padding: 7px 14px;
+  font-family: 'DM Sans';
   font-size: 8px;
   line-height: 1.25;
   text-align: center;
   border-radius: 20px;
 
-  
   text-decoration: none;
-   font-family: 'Titan One';
+}
+
+.hero-btn_first {
+  margin-right: 8px;
+  color: var(--focus-white-color);
+  background-color: var(--focus-pinc-color);
+
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+  }
+}
+
+.hero-btn_second {
+  color: var(--focus-pinc-color);
+  background-color: var(--focus-white-color);
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
 }
 
 .hero-image {
   position: absolute;
-  top: 92px;
+  bottom: 0;
   left: 117px;
   z-index: 2;
 }

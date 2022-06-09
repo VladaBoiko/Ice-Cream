@@ -1,39 +1,37 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto', 'sans-serif';
-    color: var(--main-text-color);
-    background-color: white;
-    letter-spacing: var(--main-letter-spacing);
-    font-size: 14px;
-
+  font-family: 'Roboto', 'sans-serif';
+  color: var(--main-text-color);
+  background-color: white;
+  letter-spacing: var(--main-letter-spacing);
+  font-size: 14px;
 }
 
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    @media screen and (max-width: 479px) {
-            width: 100%;
-        }
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-        width: 320px;
-    }
-        @media screen and (min-width: 768px) and (max-width: 1249px) {
-            width: 768px;
-        }
-        @media screen and (min-width: 1250px) {
-            width: 1250px;
-        }
-    
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1250px) {
+    width: 1250px;
+  }
 }
 
 h1,
@@ -44,17 +42,17 @@ h5,
 h6,
 p,
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 picture {
-    margin: 0;
-    padding: 0;
-    display: block;
+  margin: 0;
+  padding: 0;
+  display: block;
 }

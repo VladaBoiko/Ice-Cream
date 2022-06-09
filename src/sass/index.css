@@ -94,12 +94,18 @@ picture {
     padding-bottom: 190px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero .container {
+    padding-top: 147px;
+    padding-bottom: 316px;
+  }
+}
 
 .hero-content {
   position: relative;
   z-index: 3;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero-content {
     padding-left: 15px;
   }
@@ -123,6 +129,14 @@ picture {
     line-height: 1.14;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero-title {
+    max-width: 277px;
+    font-size: 38px;
+    line-height: 1.16;
+    margin-bottom: 24px;
+  }
+}
 
 .hero-title_accent {
   font-size: 48px;
@@ -137,6 +151,11 @@ picture {
     letter-spacing: 0.04em;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero-title_accent {
+    font-size: 58px;
+  }
+}
 
 .hero-btn {
   display: inline-block;
@@ -148,6 +167,13 @@ picture {
   border-radius: 20px;
   text-decoration: none;
 }
+@media screen and (min-width: 1280px) {
+  .hero-btn {
+    font-size: 14px;
+    line-height: 1.28;
+    padding: 11px 23px;
+  }
+}
 
 .hero-btn_first {
   margin-right: 8px;
@@ -157,6 +183,11 @@ picture {
 }
 .hero-btn_first:hover, .hero-btn_first:focus {
   background-color: #c7133e;
+}
+@media screen and (min-width: 1280px) {
+  .hero-btn_first {
+    margin-right: 12px;
+  }
 }
 
 .hero-btn_second {
@@ -181,15 +212,29 @@ picture {
     z-index: 3;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero-content-bottom {
+    top: 456px;
+    left: 229px;
+  }
+}
 
 .hero-text {
   font-family: "DM Sans";
+  max-width: 114px;
   margin-bottom: 7px;
   font-weight: 400;
   font-size: 8px;
   line-height: 1.5;
   color: var(--focus-white-color);
-  max-width: 114px;
+}
+@media screen and (min-width: 1280px) {
+  .hero-text {
+    max-width: 200px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
 }
 
 .hero-info-btn {
@@ -207,6 +252,12 @@ picture {
 .hero-info-btn:hover, .hero-info-btn:focus {
   background-color: #ecebeb;
 }
+@media screen and (min-width: 1280px) {
+  .hero-info-btn {
+    width: 26px;
+    height: 26px;
+  }
+}
 
 .hero-icon {
   fill: var(--focus-pinc-color);
@@ -220,8 +271,14 @@ picture {
 @media screen and (min-width: 768px) {
   .hero-list {
     position: absolute;
-    right: 40px;
     top: 92px;
+    right: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-list {
+    top: 157px;
+    right: 34px;
   }
 }
 
@@ -242,6 +299,13 @@ picture {
   flex-direction: column;
   z-index: 1;
 }
+@media screen and (min-width: 1280px) {
+  .hero-item-number {
+    font-size: 46px;
+    line-height: 1.15;
+    margin-bottom: 2px;
+  }
+}
 
 .hero-item-text {
   font-family: "DM Sans";
@@ -250,6 +314,12 @@ picture {
   line-height: 1.25;
   text-align: right;
   color: var(--focus-white-color);
+}
+@media screen and (min-width: 1280px) {
+  .hero-item-text {
+    font-size: 14px;
+    line-height: 1.28;
+  }
 }
 
 .hero-item-number::before {
@@ -264,6 +334,14 @@ picture {
   right: -8px;
   z-index: -1;
 }
+@media screen and (min-width: 1280px) {
+  .hero-item-number::before {
+    width: 30px;
+    height: 30px;
+    top: -4px;
+    right: -18px;
+  }
+}
 
 .hero-image {
   position: absolute;
@@ -274,6 +352,11 @@ picture {
 @media screen and (min-width: 768px) {
   .hero-image {
     left: 322px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-image {
+    left: 636px;
   }
 }
 
@@ -291,6 +374,16 @@ picture {
   .hero-bg-ellipse {
     top: 43px;
     left: 248px;
+    width: 335px;
+    height: 333px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-bg-ellipse {
+    top: 54px;
+    left: 517px;
+    width: 534px;
+    height: 534px;
   }
 }
 
@@ -303,7 +396,13 @@ picture {
   .hero-image_milk {
     position: absolute;
     bottom: 16px;
-    left: 32px;
+    left: 30px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-image_milk {
+    bottom: 60px;
+    left: 15px;
   }
 }
 
@@ -317,5 +416,12 @@ picture {
     position: absolute;
     bottom: 0px;
     right: 32px;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-image_tasty {
+    bottom: 0px;
+    right: 15px;
   }
 }/*# sourceMappingURL=index.css.map */

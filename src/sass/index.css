@@ -254,12 +254,18 @@ picture {
 }
 
 .products__item-ice::before {
-  content: url(../images/products/ice-cream/web/ice-cream-desctop-335-min.webp);
+  content: "";
   display: block;
   position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 280px;
+  height: 280px;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+@media screen and (min-width: 320px), (max-width: 320px) {
+  .products__item-ice::before {
+    background-image: url(../images/products/ice-cream/ice-cream-mobail-249-min.png);
+  }
 }
 
 .products__item-coffee {
@@ -271,7 +277,6 @@ picture {
 }
 
 .products-item-title {
-  display: inline-flex;
   align-items: center;
   font-family: "Titan One";
   text-align: center;

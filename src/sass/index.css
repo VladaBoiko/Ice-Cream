@@ -1,0 +1,294 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.875;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 479px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1249px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+:root {
+  --focus-pinc-color: #d41443;
+  --accent-salmon-color: #FFA5BA;
+  --text-black-color: black;
+  --text-gray-color: #907E82;
+  --focus-white-color: #ffffff;
+  --main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --bcg-pink-color: #ffb8ca;
+  --pink-btn-hover: #c7133e;
+  --white-btn-hover: #ecebeb;
+}
+
+.products {
+  display: flex;
+}
+
+.products-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.products-title-label {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 0;
+  font-family: "Titan One";
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-salmon-color);
+}
+@media screen and (min-width: 320px), (max-width: 320px) {
+  .products-title-label {
+    font-size: 18px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products-title-label {
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products-title-label {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+}
+
+.products__title {
+  font-family: "Titan One";
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--focus-pinc-color);
+}
+@media screen and (min-width: 320px), (max-width: 320px) {
+  .products__title {
+    font-size: 34px;
+    line-height: 1.14;
+    padding-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products__title {
+    font-size: 48px;
+    line-height: 1.14;
+    padding-top: 18px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products__title {
+    font-size: 58px;
+    line-height: 1.13;
+    padding-top: 16px;
+  }
+}
+
+.products__list {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+@media screen and (min-width: 768px) {
+  .products__list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-right: -32px;
+  }
+}
+
+.products__item {
+  border-radius: 24px;
+}
+@media screen and (min-width: 320px), (max-width: 320px) {
+  .products__item {
+    width: 280px;
+    height: 489px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products__item {
+    width: 280px;
+    height: 489px;
+    flex-basis: calc((100% - 48px) / 3);
+    display: flex;
+    margin: 8px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products__item {
+    width: 395px;
+    height: 535px;
+    flex-basis: calc((100% - 96px) / 3);
+    display: flex;
+    margin: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+.products__item-ice {
+  background: #FFB8CA;
+  position: relative;
+}
+
+.products__item-coffee {
+  background: #F0D1A5;
+}
+
+.products__item-milkshake {
+  background: #C2E297;
+}
+
+.products-item-title {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Titan One";
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--focus-white-color);
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 320px), (max-width: 320px) {
+  .products-item-title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products-item-title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products-item-title {
+    font-size: 30px;
+    line-height: 1;
+  }
+}
+
+.products-item-text {
+  font-family: "DM Sans";
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--focus-white-color);
+  font-weight: 700;
+}
+@media screen and (min-width: 320px), (max-width: 320px) {
+  .products-item-text {
+    font-size: 14px;
+    line-height: 1.52;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products-item-text {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products-item-text {
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}/*# sourceMappingURL=index.css.map */

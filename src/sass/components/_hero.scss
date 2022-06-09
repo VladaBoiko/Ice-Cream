@@ -139,6 +139,58 @@
   fill: var(--focus-pinc-color);
 }
 
+.hero-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 40px;
+    top: 92px;
+  }
+}
+
+.hero-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.hero-item-number {
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-align: right;
+  color: var(--focus-pinc-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.hero-item-text {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: right;
+  color: var(--focus-white-color);
+}
+
+.hero-item-number::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--focus-white-color);
+  position: absolute;
+  top: -1px;
+  right: -8px;
+  z-index: -1;
+}
+
 .hero-image {
   position: absolute;
   bottom: 0;

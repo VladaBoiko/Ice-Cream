@@ -1,0 +1,65 @@
+.hero {
+  background-color: #ffb8ca;
+}
+
+.hero .container {
+  position: relative;
+  outline: 1px solid red;
+  padding-top: 194px;
+  padding-bottom: 158px;
+
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-title {
+  max-width: 218px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--focus-white-color);
+}
+
+.hero-title_accent {
+  font-size: 48px;
+  line-height: 0.96;
+  color: var(--focus-pinc-color);
+}
+
+.hero-btn {
+  display: inline-flex;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: center;
+  border-radius: 20px;
+
+  
+  text-decoration: none;
+   font-family: 'Titan One';
+}
+
+.hero-image {
+  position: absolute;
+  top: 92px;
+  left: 117px;
+  z-index: 2;
+}
+
+.hero-bg-ellipse {
+  position: absolute;
+  top: 83px;
+  left: 36px;
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: var(--accent-salmon-color);
+  z-index: 1;
+}

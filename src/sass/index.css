@@ -122,11 +122,13 @@ picture {
   }
 }
 
-.products-wrap {
+.products-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
 }
 

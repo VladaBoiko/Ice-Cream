@@ -103,7 +103,7 @@ picture {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 320px), (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .products {
     padding-top: 80px;
     padding-bottom: 40px;
@@ -143,7 +143,7 @@ picture {
   text-transform: uppercase;
   color: var(--accent-salmon-color);
 }
-@media screen and (min-width: 320px), (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .products-title-label {
     font-size: 18px;
     line-height: 1.16;
@@ -166,13 +166,14 @@ picture {
 }
 
 .products__title {
+  z-index: 1;
   font-family: "Titan One";
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--focus-pinc-color);
 }
-@media screen and (min-width: 320px), (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .products__title {
     font-size: 34px;
     line-height: 1.14;
@@ -205,6 +206,7 @@ picture {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    margin-right: -16px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -219,9 +221,10 @@ picture {
 }
 
 .products__item {
+  display: block;
   border-radius: 24px;
 }
-@media screen and (min-width: 320px), (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item {
     width: 280px;
     height: 489px;
@@ -232,8 +235,9 @@ picture {
     width: 280px;
     height: 489px;
     flex-basis: calc((100% - 48px) / 3);
-    display: flex;
-    margin: 8px;
+  }
+  .products__item:not(:last-child) {
+    margin-right: 16px;
     flex-wrap: wrap;
   }
 }
@@ -242,13 +246,16 @@ picture {
     width: 395px;
     height: 535px;
     flex-basis: calc((100% - 96px) / 3);
+  }
+  .products__item:not(:last-child) {
     display: flex;
-    margin: 16px;
+    margin-right: 32px;
     flex-wrap: wrap;
   }
 }
 
 .products__item-ice {
+  display: block;
   background: #FFB8CA;
   position: relative;
 }
@@ -260,19 +267,23 @@ picture {
   width: 280px;
   height: 280px;
   background-repeat: no-repeat;
-  transform: translateY(-50%);
+  background-size: contain;
+  top: -50px;
+  z-index: 0;
 }
-@media screen and (min-width: 320px), (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item-ice::before {
     background-image: url(../images/products/ice-cream/ice-cream-mobail-249-min.png);
   }
 }
 
 .products__item-coffee {
+  display: block;
   background: #F0D1A5;
 }
 
 .products__item-milkshake {
+  display: block;
   background: #C2E297;
 }
 
@@ -285,7 +296,7 @@ picture {
   color: var(--focus-white-color);
   margin-bottom: 70px;
 }
-@media screen and (min-width: 320px), (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .products-item-title {
     font-size: 20px;
     line-height: 1.15;
@@ -311,7 +322,7 @@ picture {
   color: var(--focus-white-color);
   font-weight: 700;
 }
-@media screen and (min-width: 320px), (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .products-item-text {
     font-size: 14px;
     line-height: 1.52;

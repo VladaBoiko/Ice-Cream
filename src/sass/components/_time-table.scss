@@ -1,6 +1,8 @@
 .contacts {
   position: relative;
   padding-bottom: 48px;
+
+  min-width: 320px;
   @media screen and (min-width: 768px) {
     padding-bottom: 40px;
   }
@@ -37,6 +39,10 @@
     #fff5f6 22.4%,
     #fff5f6 100%
   );
+
+  &__container {
+    padding: 0 15px;
+  }
 
   // .contacts__title
   &__title {
@@ -225,16 +231,10 @@
 }
 
 .button {
-  --button-dark-color: #d41443;
-  --button-dark-color-hover: #c7133e;
-  --button-light-color: #ffffff;
-  --button-light-color-hover: #ecebeb;
-
   font-family: inherit;
-  padding: 15px 35px;
-  @media screen and (min-width: 768px) {
-    padding: 13px 35px;
-  }
+  width: 161px;
+  height: 44px;
+
   border-radius: 22px;
   border: none;
 
@@ -255,28 +255,40 @@
 
   &__icon {
     display: inline-block;
-    margin-left: 13px;
+    margin-left: 8px;
     width: 8px;
     height: 10px;
     fill: currentColor;
   }
   // .button--red
   &--red {
-    background-color: var(--button-dark-color);
+    @media screen and (min-width: 768px) {
+      width: 192px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 198px;
+    }
+    background-color: var(--focus-pinc-color);
     color: var(--focus-white-color);
     &:hover,
     &:focus {
-      background-color: var(--button-dark-color-hover);
+      background-color: var(--pink-btn-hover);
     }
   }
   // .button--white
   &--white {
-    background-color: var(--button-light-color);
+    @media screen and (min-width: 768px) {
+      width: 174px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 180px;
+    }
+    background-color: var(--focus-white-color);
     color: var(--focus-pinc-color);
 
     &:hover,
     &:focus {
-      background-color: var(--button-light-color-hover);
+      background-color: var(--white-btn-hover);
     }
   }
 }

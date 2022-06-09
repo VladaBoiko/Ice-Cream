@@ -66,10 +66,6 @@
   }
   // .contacts__list
   &__list {
-    @media screen and (min-width: 768px) {
-      display: flex;
-      gap: 32px;
-    }
   }
   // .contacts__buttons
   &__buttons {
@@ -85,8 +81,16 @@
   }
 }
 .list-contacts {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
   // .list-contacts__item
   &__item {
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 64px) / 3);
+    }
     padding: 40px 32px;
     background: var(--focus-white-color);
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);

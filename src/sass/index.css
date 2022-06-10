@@ -357,14 +357,14 @@ picture {
   .products-item-title {
     font-size: 20px;
     line-height: 1.15;
-    padding-top: 150px;
+    padding-top: 160px;
   }
 }
 @media screen and (min-width: 768px) {
   .products-item-title {
     font-size: 20px;
     line-height: 1.15;
-    padding-top: 150px;
+    padding-top: 118px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -404,6 +404,7 @@ picture {
     width: 200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -413,6 +414,7 @@ picture {
     width: 160px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -422,5 +424,28 @@ picture {
     width: 241px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 60px;
   }
+}
+
+.products-info-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--focus-white-color);
+  border-radius: 50%;
+  border: 0.5px solid var(--focus-white-color);
+  transition: border var(--main-transition), background-color var(--main-transition);
+}
+.products-info-btn:hover, .products-info-btn:focus {
+  background-color: #ecebeb;
+}
+
+.products-icon {
+  fill: var(--focus-pinc-color);
 }/*# sourceMappingURL=index.css.map */

@@ -81,21 +81,27 @@
   }
 }
 .list-contacts {
-  @media screen and (min-width: 768px) {
+  $bigMobile: 480px;
+  $gap: 32px;
+
+  @media screen and (min-width: $bigMobile) {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: $gap;
   }
   // .list-contacts__item
   &__item {
+    @media screen and (min-width: $bigMobile) {
+      flex-basis: calc((100% - $gap) / 2);
+    }
     @media screen and (min-width: 768px) {
-      flex-basis: calc((100% - 64px) / 3);
+      flex-basis: calc((100% - $gap * 2) / 3);
     }
     padding: 40px 32px;
     background: var(--focus-white-color);
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
-    @media screen and (max-width: 767.98px) {
+    @media screen and (max-width: ($bigMobile - 1)) {
       &:not(:last-child) {
         margin-bottom: 20px;
       }

@@ -107,6 +107,7 @@ picture {
   padding-top: 194px;
   padding-bottom: 158px;
   overflow: hidden;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 768px) {
   .hero .container {
@@ -124,11 +125,6 @@ picture {
 .hero-content {
   position: relative;
   z-index: 3;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .hero-content {
-    padding-left: 15px;
-  }
 }
 
 .hero-title {
@@ -382,7 +378,7 @@ picture {
 
 .hero-bg-ellipse {
   position: absolute;
-  top: 83px;
+  bottom: 75px;
   left: 36px;
   width: 346px;
   height: 344px;
@@ -392,7 +388,7 @@ picture {
 }
 @media screen and (min-width: 768px) {
   .hero-bg-ellipse {
-    top: 43px;
+    bottom: 40px;
     left: 248px;
     width: 335px;
     height: 333px;
@@ -400,7 +396,7 @@ picture {
 }
 @media screen and (min-width: 1280px) {
   .hero-bg-ellipse {
-    top: 54px;
+    bottom: 76px;
     left: 517px;
     width: 534px;
     height: 534px;

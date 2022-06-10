@@ -429,6 +429,7 @@ picture {
 }
 
 .products-info-btn {
+  cursor: pointer;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -443,7 +444,13 @@ picture {
   transition: border var(--main-transition), background-color var(--main-transition);
 }
 .products-info-btn:hover, .products-info-btn:focus {
-  background-color: #ecebeb;
+  background-color: var(--focus-pinc-color);
+  border: none;
+  transition: background-color var(--main-transition);
+}
+.products-info-btn:hover .products-icon, .products-info-btn:focus .products-icon {
+  fill: var(--focus-white-color);
+  transition: fill var(--main-transition);
 }
 
 .products-icon {

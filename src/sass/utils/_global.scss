@@ -15,7 +15,9 @@ body {
     font-size: 16px;
     line-height: 1.875;
 }
-
+.noscroll {
+    overflow: hidden;
+}
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -82,3 +84,9 @@ picture {
     clip-path: inset(50%);
     margin: -1px;
   }
+button{
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}

@@ -126,23 +126,59 @@
   </div>
 </section>
 
-<!-- <div class="backdrop backdrop--is-hidden" data-modal-locations>
-  <div class="modal">
+<div
+  class="backdrop backdrop-location backdrop-location--is-hidden"
+  data-modal-locations
+>
+  <div class="modal-location">
     <button
       type="button"
-      class="modal__close-button"
-      data-close-modal-locations
-    >
-      Закрыть
-    </button>
-    <strong class="modal__title">Our Locations</strong>
-    <p class="modal__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aut
-      suscipit enim perspiciatis officiis tempora accusamus officia ipsum unde
-      maiores!
-    </p>
+      class="modal-location__close-button"
+      data-modal-close-locations
+    ></button>
+    <div class="modal-location__body">
+      <span class="modal-location__title">Locations</span>
+      <address class="modal-location__address address-location">
+        <ul class="address-location__list">
+          <li class="address-location__item">
+            <p>UCLA Department or Residence Hal</p>
+          </li>
+          <li class="address-location__item"><p>5555 Campus Hall</p></li>
+          <li class="address-location__item"><p>Los Angeles, CA 90024</p></li>
+        </ul>
+      </address>
+    </div>
+    <!-- <div class="modal-location__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230677.93839995828!2d-118.31727517778424!3d34.06446797625815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1654858180458!5m2!1sru!2sua"
+        width="50%"
+        height="400px"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div> -->
+    <div id="map" class="modal-location__map"></div>
+
+    <script>
+      function myMap() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(51.5, -0.2),
+          zoom: 10,
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+      }
+    </script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"
+      async
+      defer
+    ></script>
   </div>
-</div> -->
+</div>
 
 <!-- <div class="backdrop backdrop--is-hidden" data-modal-franchise>
   <div class="modal">

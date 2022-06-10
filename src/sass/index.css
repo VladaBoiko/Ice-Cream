@@ -111,6 +111,346 @@ button {
   --white-btn-hover: #ecebeb;
 }
 
+.hero {
+  background-color: var(--bcg-pink-color);
+  position: relative;
+  padding-top: 194px;
+  padding-bottom: 158px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 102px;
+    padding-bottom: 190px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding-top: 147px;
+    padding-bottom: 316px;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-title {
+  max-width: 218px;
+  margin-bottom: 20px;
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--focus-white-color);
+}
+@media screen and (min-width: 768px) {
+  .hero-title {
+    max-width: 162px;
+    font-size: 22px;
+    line-height: 1.14;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-title {
+    max-width: 277px;
+    font-size: 38px;
+    line-height: 1.16;
+    margin-bottom: 24px;
+  }
+}
+
+.hero-title_accent {
+  font-size: 48px;
+  line-height: 0.96;
+  letter-spacing: 0;
+  color: var(--focus-pinc-color);
+}
+@media screen and (min-width: 768px) {
+  .hero-title_accent {
+    font-size: 34px;
+    line-height: 0.91;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-title_accent {
+    font-size: 58px;
+  }
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 7px 14px;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: center;
+  border-radius: 20px;
+  text-decoration: none;
+}
+@media screen and (min-width: 1280px) {
+  .hero-btn {
+    font-size: 14px;
+    line-height: 1.28;
+    padding: 11px 23px;
+  }
+}
+
+.hero-btn_first {
+  margin-right: 8px;
+  color: var(--focus-white-color);
+  background-color: var(--focus-pinc-color);
+  transition: background-color var(--main-transition);
+}
+.hero-btn_first:hover, .hero-btn_first:focus {
+  background-color: var(--pink-btn-hover);
+}
+@media screen and (min-width: 1280px) {
+  .hero-btn_first {
+    margin-right: 12px;
+  }
+}
+
+.hero-btn_second {
+  color: var(--focus-pinc-color);
+  background-color: var(--focus-white-color);
+  transition: background-color var(--main-transition);
+}
+.hero-btn_second:hover, .hero-btn_second:focus {
+  background-color: var(--white-btn-hover);
+}
+
+@media screen and (max-width: 767px) {
+  .hero-content-bottom {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-content-bottom {
+    position: absolute;
+    top: 185px;
+    left: 152px;
+    z-index: 3;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-content-bottom {
+    top: 309px;
+    left: 229px;
+  }
+}
+
+.hero-text {
+  max-width: 114px;
+  margin-bottom: 7px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+  color: var(--focus-white-color);
+}
+@media screen and (min-width: 1280px) {
+  .hero-text {
+    max-width: 200px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+}
+
+.hero-info-btn {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--focus-white-color);
+  border-radius: 50%;
+  border: none;
+  transition: background-color var(--main-transition);
+}
+.hero-info-btn:hover, .hero-info-btn:focus {
+  background-color: var(--pink-btn-hover);
+}
+@media screen and (min-width: 1280px) {
+  .hero-info-btn {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.hero-icon {
+  fill: var(--focus-pinc-color);
+  transition: fill var(--main-transition);
+}
+.hero-info-btn:hover .hero-icon, .hero-info-btn:focus .hero-icon {
+  fill: var(--focus-white-color);
+}
+
+@media screen and (max-width: 767px) {
+  .hero-list {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-list {
+    position: absolute;
+    top: 92px;
+    right: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-list {
+    top: 157px;
+    right: 34px;
+  }
+}
+
+.hero-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.hero-item-number {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-align: right;
+  color: var(--focus-pinc-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+@media screen and (min-width: 1280px) {
+  .hero-item-number {
+    font-size: 46px;
+    line-height: 1.15;
+    margin-bottom: 2px;
+  }
+}
+
+.hero-item-text {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: right;
+  color: var(--focus-white-color);
+}
+@media screen and (min-width: 1280px) {
+  .hero-item-text {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.hero-item-number::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--focus-white-color);
+  position: absolute;
+  top: -1px;
+  right: -8px;
+  z-index: -1;
+}
+@media screen and (min-width: 1280px) {
+  .hero-item-number::before {
+    width: 30px;
+    height: 30px;
+    top: -4px;
+    right: -18px;
+  }
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .hero-image {
+    right: 303px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-image {
+    right: 408px;
+  }
+}
+
+.hero-bg-ellipse {
+  position: absolute;
+  bottom: 75px;
+  right: -62px;
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: var(--accent-salmon-color);
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .hero-bg-ellipse {
+    bottom: 40px;
+    right: 185px;
+    width: 335px;
+    height: 333px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-bg-ellipse {
+    bottom: 76px;
+    right: 229px;
+    width: 534px;
+    height: 534px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-image_milk {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-image_milk {
+    position: absolute;
+    top: 124px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-image_milk {
+    top: 241px;
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-image_tasty {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-image_tasty {
+    position: absolute;
+    bottom: 0px;
+    right: 32px;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-image_tasty {
+    bottom: 0px;
+    right: 15px;
+  }
+}
+
 .noscroll {
   overflow: hidden;
 }

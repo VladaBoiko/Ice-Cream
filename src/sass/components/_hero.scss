@@ -1,8 +1,5 @@
 .hero {
   background-color: #ffb8ca;
-}
-
-.hero .container {
   position: relative;
   padding-top: 194px;
   padding-bottom: 158px;
@@ -18,6 +15,23 @@
     padding-bottom: 316px;
   }
 }
+
+// .hero .container {
+//   position: relative;
+//   padding-top: 194px;
+//   padding-bottom: 158px;
+//   overflow: hidden;
+
+//   @media screen and (min-width: 768px) {
+//     padding-top: 102px;
+//     padding-bottom: 190px;
+//   }
+
+//   @media screen and (min-width: 1280px) {
+//     padding-top: 147px;
+//     padding-bottom: 316px;
+//   }
+// }
 
 .hero-content {
   position: relative;
@@ -254,22 +268,22 @@
 .hero-image {
   position: absolute;
   bottom: 0;
-  left: 117px;
+  right: 32px;
   z-index: 2;
 
   @media screen and (min-width: 768px) {
-    left: 322px;
+    right: 303px;
   }
 
   @media screen and (min-width: 1280px) {
-    left: 636px;
+    right: 408px;
   }
 }
 
 .hero-bg-ellipse {
   position: absolute;
   bottom: 75px;
-  left: 36px;
+  right: -62px;
   width: 346px;
   height: 344px;
   border-radius: 50%;
@@ -278,14 +292,14 @@
 
   @media screen and (min-width: 768px) {
     bottom: 40px;
-    left: 248px;
+    right: 185px;
     width: 335px;
     height: 333px;
   }
 
   @media screen and (min-width: 1280px) {
     bottom: 76px;
-    left: 517px;
+    right: 229px;
     width: 534px;
     height: 534px;
   }

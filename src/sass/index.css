@@ -1225,6 +1225,7 @@ button {
     position: absolute;
     top: 15px;
     left: 50%;
+    transform: translate(-50%, 0);
     max-width: 450px;
   }
 }
@@ -1280,6 +1281,11 @@ button {
   height: 40px;
   padding: 10px;
   border-radius: 10px;
+}
+.modal-franchise__input::placeholder {
+  font-weight: 700;
+  font-size: 12px;
+  color: hwb(0 0% 100%/0.333);
 }
 .modal-franchise__text-area {
   resize: none;

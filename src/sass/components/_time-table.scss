@@ -452,6 +452,7 @@
     position: absolute;
     top: 15px;
     left: 50%;
+    transform: translate(-50%, 0);
     @media screen and (min-height: 650px) {
       top: 50%;
       transform: translate(-50%, -50%);
@@ -514,6 +515,11 @@
     height: 40px;
     padding: 10px;
     border-radius: 10px;
+    &::placeholder {
+      font-weight: 700;
+      font-size: 12px;
+      color: hwb(0 0% 100% / 0.333);
+    }
   }
   // .modal-franchise__text-area
   &__text-area {

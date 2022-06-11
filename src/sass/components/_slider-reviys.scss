@@ -1,0 +1,336 @@
+.slyder {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.customer {
+}
+
+.customer__photo {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+}
+
+.slider2 {
+  background-color: #fafafa;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 280px;
+    padding: 37px 53px;
+    top: 32px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    width: 620px;
+    padding: 20px 6px 36px 6px;
+    left: 55px;
+    top: 20;
+  }
+
+  @media screen and (min-width: 1250px) {
+    width: 1034px;
+    padding: 32px 107px 32px 106px;
+    left: 106px;
+    top: 16px;
+  }
+}
+
+.slider3 {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    top: 52px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    top: 20px;
+  }
+
+  @media screen and (min-width: 1250px) {
+    top: 18px;
+  }
+}
+
+.slider2::before {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    position: absolute;
+    content: '';
+    width: 54px;
+    height: 40px;
+    z-index: 1;
+    background-image: url(/src/images/slider-birds.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 26px;
+    left: 46px;
+  }
+}
+
+.suctomer__comment {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 186%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--text-black-color);
+  text-align: center;
+  // text-decoration: underline;
+  // text-underline-offset: 10px;
+  // text-decoration-color: #e1e1e1;
+  background-color: #fafafa;
+  // background-image: url(/src/images/slider-birds.svg);
+  // background-repeat: no-repeat;
+  // background-size: 54px 40px;
+  // padding: 0px 37px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: 12px;
+    line-height: 245%;
+    padding: 0px 6px;
+    background: repeating-linear-gradient(
+      #fafafa,
+      #fafafa 26px,
+      #e1e1e1 29px,
+      #e1e1e1 0
+    );
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    font-size: 14px;
+    line-height: 216%;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0px 46px;
+    background-position: 14px 26px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: repeating-linear-gradient(
+      #fafafa,
+      #fafafa 26px,
+      #e1e1e1 29px,
+      #e1e1e1 0
+    );
+  }
+
+  @media screen and (min-width: 1250px) {
+    background: repeating-linear-gradient(
+      #fafafa,
+      #fafafa 26px,
+      #e1e1e1 29px,
+      #e1e1e1 0
+    );
+    margin: 0;
+    margin-top: 16px;
+    padding: 0px 50px;
+  }
+}
+
+.suctomer__comment::before {
+  position: absolute;
+  content: '';
+  width: 54px;
+  height: 40px;
+  background-image: url(/src/images/slider-birds.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  top: -10px;
+  left: 5px;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    top: -10px;
+    left: 4px;
+  }
+
+  @media screen and (min-width: 1250px) {
+    top: -10px;
+    left: 5px;
+  }
+}
+
+.customer__name {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  color: var(--text-black-color);
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 186%;
+  text-align: center;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin: 0;
+    margin-top: 16px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    margin: 0;
+    margin-top: 24px;
+  }
+
+  @media screen and (min-width: 1250px) {
+    margin-top: 36px;
+  }
+}
+
+.slider1 {
+  min-width: 0;
+}
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+  margin: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+}
+/* Лента слайдов */
+.slick-track {
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+
+.slider2 .slick-dots {
+  bottom: inherit;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-top: 26px;
+    margin-left: -53px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    margin-top: 10px;
+    margin-left: -2px;
+  }
+
+  @media screen and (min-width: 1250px) {
+    margin-top: 26px;
+    margin-left: -120px;
+  }
+}
+
+.slider2 .slick-dots li {
+  width: 10px;
+  height: 10px;
+}
+
+.slider2 .slick-dots li button {
+  width: 4px;
+  height: 4px;
+  background-color: var(--pink-btn-hover);
+  border-radius: 50%;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.slider2 .slick-dots li button::before {
+  display: none;
+}
+
+.slider3 .slick-dots {
+  bottom: inherit;
+}
+
+.slider3 .slick-dots li {
+  width: 18px;
+  height: 18px;
+}
+
+.slider3 .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.slider3 .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.slider3 .slick-dots .slick-active button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: white;
+  border-radius: 0;
+  background-image: url(/src/images/slyder/home.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: none;
+}
+
+.slider3 .slick-active button::before {
+  display: none;
+}
+
+.slider3 .slick-dots {
+  margin-top: 10px;
+}
+
+.slider3 .slick-dots li button::before {
+  display: none;
+}
+
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}

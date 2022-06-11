@@ -1,6 +1,6 @@
 // new version
 .section-advantes {
-  background-color: #FFF5F6;
+  background-color: #fff5f6;
 }
 .advantes-item {
   width: 270px;
@@ -9,18 +9,18 @@
   }
 }
 
-// .visually-hidden {
-//   position: absolute;
-//   white-space: nowrap;
-//   width: 1px;
-//   height: 1px;
-//   overflow: hidden;
-//   border: 0;
-//   padding: 0;
-//   clip: rect(0 0 0 0);
-//   clip-path: inset(50%);
-//   margin: -1px;
-// }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 .section-advantes-list {
   display: flex;
 }
@@ -44,16 +44,16 @@
   color: #000;
   padding-bottom: 84px;
   font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 174%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 174%;
 }
 
 .advantages-img {
   display: block;
   margin: 0;
-    padding-bottom: 36px;
+  padding-bottom: 36px;
   img {
     width: 50px;
   }

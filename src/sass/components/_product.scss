@@ -55,6 +55,7 @@ color: var(--focus-pinc-color);
 @media screen and (min-width: 320px) and (max-width: 767px)  {
 font-size: 34px;
 line-height: 1.14;
+margin-bottom: 8px;
 
 
 }
@@ -62,12 +63,14 @@ line-height: 1.14;
 @media screen and (min-width: 768px) {
 font-size: 48px;
 line-height: 1.14;
+margin-bottom: 16px;
 
 }
 
 @media screen and (min-width: 1280px) {
 font-size: 58px;
 line-height: 1.13;
+margin-bottom: 0;
 
 
 }
@@ -102,6 +105,8 @@ border-radius: 24px;
 width: 280px;
 height: 489px;
 margin-top: 150px;
+margin-right: auto;
+margin-left: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -129,7 +134,7 @@ flex-basis: calc((100% - 3 * 32px) / 3);
 
 .products__item-ice {
 display: block;
-background: #FFB8CA;
+background: var(--bcg-pink-color);
 position: relative;
 
 }
@@ -292,30 +297,26 @@ text-align: center;
 letter-spacing: 0.04em;
 color: var(--focus-white-color);
 font-weight: 700;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 32px;
+
 @media screen and (min-width: 320px) and (max-width: 767px)  {
 font-size: 14px;
 line-height: 1.52;
 width: 200px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
 font-size: 14px;
 line-height: 1.76;
 width: 160px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 32px;
 }
 
 @media screen and (min-width: 1280px) {
 font-size: 16px;
 line-height: 1.76;
 width: 241px;
-margin-left: auto;
-margin-right: auto;
 margin-bottom: 60px;
 }
 }
@@ -341,12 +342,12 @@ margin-right: auto;
 &:focus { 
     background-color: var(--focus-pinc-color);
      border: none;
-   transition: background-color var(--main-transition);
+  
 }
   &:hover .products-icon ,
   &:focus .products-icon {
     fill: var(--focus-white-color);
-    transition: fill var(--main-transition);
+    
      
   }
 }

@@ -16,7 +16,7 @@
     padding-bottom: 60px;
   }
 */
-  /*background-color: #000;*/
+/*background-color: #000;*/
 /*}
 .advantes-item {
   width: 270px;
@@ -25,7 +25,7 @@
   }
 }
 */
-.visually-hidden {
+/*.visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -36,7 +36,7 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
+}*/
 /*
 .section-advantes-list {
   display: flex;
@@ -178,150 +178,114 @@
 }
 */
 
+.section-advantages {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
 
+  @media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
 
-.section-advantes {
-	@media screen and (min-width: 320px) and (max-width: 767px)  {
-	padding-top: 80px;
-	padding-bottom: 40px;     
-	}
-	
+  @media screen and (min-width: 1280px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 
-	@media screen and (min-width: 768px) {
-	padding-top: 40px;
-	padding-bottom: 60px;   
-	}
-	
+.advantages__list {
+  display: flex;
+  align-content: center;
 
-	@media screen and (min-width: 1280px) {
-	  padding-top: 60px;
-	  padding-bottom: 60px;
-	
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: block;
+  }
 
-	}
-	}
-	
+  @media screen and (min-width: 768px) {
+    margin-right: -16px;
+  }
 
-	
-	
+  @media screen and (min-width: 1280px) {
+    margin-right: -32px;
+  }
+}
 
-	
+.advantages__item {
+  display: block;
 
-	.advantes__list {
-	    display: flex;
-		align-content: center;
-	
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 280px;
+    height: 489px;
+    margin-top: 150px;
+  }
 
-	  @media screen and (min-width: 320px) and (max-width: 767px) {
-	display: block;
-	  }
-	
+  @media screen and (min-width: 768px) {
+    width: 224px;
+    height: 473px;
+    margin-top: 150px;
+    flex-basis: calc((100% - 3 * 16px) / 3);
+    &:not(:last-child) {
+      margin-right: 16px;
+      flex-wrap: wrap;
+    }
+  }
 
-	
+  @media screen and (min-width: 1280px) {
+    margin-top: 250px;
+    width: 395px;
+    height: 535px;
+    flex-basis: calc((100% - 3 * 32px) / 3);
+    &:not(:last-child) {
+      margin-right: 32px;
+      flex-wrap: wrap;
+    }
+  }
+}
 
-	
+.advantages-img-one {
+  display: block;
+  background: #ffb8ca;
+  position: relative;
+}
 
-	@media screen and (min-width: 768px) {
-	margin-right: -16px;
-	}
-	
+.section-advantages-title::before {
+  content: '';
+  display: block;
+  /*position: absolute;*/
+  background-repeat: no-repeat;
+  background-size: contain;
 
-	@media screen and (min-width: 1280px) {
-	margin-right: -32px;
-	
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    top: -150px;
+    width: 33px;
+    height: 50px;
+    background-image: url(../images/advantages/icon1.png);
+  }
+  @media screen and (min-width: 768px) {
+    // top: -150px;
+    width: 33px;
+    height: 50px;
+    background-image: url(../images/advantages/icon1.png);
+  }
 
-	}
-	}
-	
+  @media screen and (min-width: 1280px) {
+    /*top: -250px;*/
+    width: 33px;
+    height: 50px;
+    background-image: url(../images/advantages/icon1.png);
+  }
+}
 
-	.advantes__item {
-	display: block;
-	/*border-radius: 24px;*/
-	
-
-	@media screen and (min-width: 320px) and (max-width: 767px)  {
-	width: 280px;
-	height: 489px;
-	margin-top: 150px;
-	}
-	
-
-	@media screen and (min-width: 768px) {
-	width: 224px;
-	height: 473px;
-	margin-top: 150px;
-	flex-basis: calc((100% - 3 * 16px) / 3);
-	&:not(:last-child) {
-		margin-right: 16px;
-		flex-wrap: wrap;
-	}
-	}
-	
-
-	@media screen and (min-width: 1280px) {
-	margin-top: 250px;
-	width: 395px;
-	height: 535px;
-	flex-basis: calc((100% - 3 * 32px) / 3);
-	&:not(:last-child) {
-		margin-right: 32px;
-		flex-wrap: wrap;
-	}
-	}
-	}
-	
-
-	.advantes__img1 {
-	display: block;
-	background: #FFB8CA;
-	position: relative;
-	
-
-	}
-	
-
-	.section-advantes-title::before {
-	    content: "";
-	    display: block;
-	    /*position: absolute;*/
-	    background-repeat: no-repeat;
-	    background-size: contain;
-	    
-	
-
-	@media screen and (min-width: 320px) and (max-width: 767px) {
-	    top: -150px;
-	     width: 100%;
-	    height: 100%;
-	background-image: url(./images/advantages/icon1.png);
-	}
-	@media screen and (min-width: 768px) {
-	    top: -150px;
-	     width: 100%;
-	    height: 100%;
-	background-image: url(./images/advantages/icon1.png);
-	}
-	
-
-	@media screen and (min-width: 1280px) {
-	    top: -250px;
-	    width: 50px;
-	    height: 50px;
-	 background-image: url(./images/advantages/icon1.png);   
-	}
-	
-
-	}
-	
-
-	/*.products__item-coffee {
+/*.advantages__item-two {
 	display: block;
 	background: #F0D1A5;
 	position: relative;
 	}
 	
 
-	.products__item-coffee::before {
+	.advantages__item-coffee::before {
 	    content: "";
 	    display: block;
 	    position: absolute;
@@ -359,14 +323,14 @@
 
 	
 
-	.products__item-milkshake {
+	.advantages__item-milkshake {
 	display: block;
 	background: #C2E297;
 	position: relative;
 	}
 	
 
-	.products__item-milkshake::before {
+	.advantages__item-milkshake::before {
 	    content: "";
 	    display: block;
 	    position: absolute;
@@ -402,7 +366,7 @@
 
 	
 
-	.products-item-title {
+	.advantages-item-title {
 	position: relative;
 	align-items: center;
 	font-family: 'Titan One';
@@ -439,7 +403,7 @@
 	}
 	
 
-	.products-item-title::after {
+	.advantages-item-title::after {
 	    content: "";
 	    position: absolute;
 	    display: block;
@@ -456,7 +420,7 @@
 	}
 	
 
-	.products-item-text {
+	.advantages-item-text {
 	font-family: 'DM Sans';
 	text-align: center;
 	letter-spacing: 0.04em;
@@ -493,43 +457,8 @@
 	}
 	
 
-	.products-info-btn {
-	    cursor: pointer;
-	width: 40px;
-	  height: 40px;
-	  padding: 0;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  margin-left: auto;
-	margin-right: auto;
-	  background-color: var(--focus-white-color);
-	  border-radius: 50%;
-	  border: 0.5px solid var(--focus-white-color);
 	
-
-	  transition: border var(--main-transition),
-	    background-color var(--main-transition);
-	
-
-	&:hover,
-	&:focus { 
-	    background-color: var(--focus-pinc-color);
-	     border: none;
-	   transition: background-color var(--main-transition);
-	}
-	  &:hover .products-icon ,
-	  &:focus .products-icon {
-	    fill: var(--focus-white-color);
-	    transition: fill var(--main-transition);
-	     
-	  }
-	}
-	  
-	
-
 	
 
 	
 */
-

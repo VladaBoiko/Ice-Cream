@@ -1,4 +1,85 @@
-// new version
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.875;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 479px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1249px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+:root {
+  --focus-pinc-color: #d41443;
+  --accent-salmon-color: #FFA5BA;
+  --text-black-color: black;
+  --text-gray-color: #907E82;
+  --focus-white-color: #ffffff;
+  --main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /*.section-advantes {
   @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -16,7 +97,7 @@
     padding-bottom: 60px;
   }
 */
-  /*background-color: #000;*/
+/*background-color: #000;*/
 /*}
 .advantes-item {
   width: 270px;
@@ -34,9 +115,11 @@
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   margin: -1px;
 }
+
 /*
 .section-advantes-list {
   display: flex;
@@ -177,149 +260,125 @@
   }
 }
 */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .section-advantes {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-advantes {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-advantes {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 
+.advantes__list {
+  display: flex;
+  align-content: center;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .advantes__list {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantes__list {
+    margin-right: -16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .advantes__list {
+    margin-right: -32px;
+  }
+}
 
+.advantes__item {
+  display: block;
+  /*border-radius: 24px;*/
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .advantes__item {
+    width: 280px;
+    height: 489px;
+    margin-top: 150px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantes__item {
+    width: 224px;
+    height: 473px;
+    margin-top: 150px;
+    flex-basis: calc((100% - 48px) / 3);
+  }
+  .advantes__item:not(:last-child) {
+    margin-right: 16px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .advantes__item {
+    margin-top: 250px;
+    width: 395px;
+    height: 535px;
+    flex-basis: calc((100% - 96px) / 3);
+  }
+  .advantes__item:not(:last-child) {
+    margin-right: 32px;
+    flex-wrap: wrap;
+  }
+}
 
-.section-advantes {
-	@media screen and (min-width: 320px) and (max-width: 767px)  {
-	padding-top: 80px;
-	padding-bottom: 40px;     
-	}
-	
+.advantes__img1 {
+  display: block;
+  background: #FFB8CA;
+  position: relative;
+}
 
-	@media screen and (min-width: 768px) {
-	padding-top: 40px;
-	padding-bottom: 60px;   
-	}
-	
+.section-advantes-title::before {
+  content: "";
+  display: block;
+  /*position: absolute;*/
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .section-advantes-title::before {
+    top: -150px;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/advantages/icon1.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-advantes-title::before {
+    top: -150px;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/advantages/icon1.png);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-advantes-title::before {
+    top: -250px;
+    width: 50px;
+    height: 50px;
+    background-image: url(./images/advantages/icon1.png);
+  }
+}
 
-	@media screen and (min-width: 1280px) {
-	  padding-top: 60px;
-	  padding-bottom: 60px;
-	
-
-	}
-	}
-	
-
-	
-	
-
-	
-
-	.advantes__list {
-	    display: flex;
-		align-content: center;
-	
-
-	  @media screen and (min-width: 320px) and (max-width: 767px) {
-	display: block;
-	  }
-	
-
-	
-
-	
-
-	@media screen and (min-width: 768px) {
-	margin-right: -16px;
-	}
-	
-
-	@media screen and (min-width: 1280px) {
-	margin-right: -32px;
-	
-
-	}
-	}
-	
-
-	.advantes__item {
-	display: block;
-	/*border-radius: 24px;*/
-	
-
-	@media screen and (min-width: 320px) and (max-width: 767px)  {
-	width: 280px;
-	height: 489px;
-	margin-top: 150px;
-	}
-	
-
-	@media screen and (min-width: 768px) {
-	width: 224px;
-	height: 473px;
-	margin-top: 150px;
-	flex-basis: calc((100% - 3 * 16px) / 3);
-	&:not(:last-child) {
-		margin-right: 16px;
-		flex-wrap: wrap;
-	}
-	}
-	
-
-	@media screen and (min-width: 1280px) {
-	margin-top: 250px;
-	width: 395px;
-	height: 535px;
-	flex-basis: calc((100% - 3 * 32px) / 3);
-	&:not(:last-child) {
-		margin-right: 32px;
-		flex-wrap: wrap;
-	}
-	}
-	}
-	
-
-	.advantes__img1 {
-	display: block;
-	background: #FFB8CA;
-	position: relative;
-	
-
-	}
-	
-
-	.section-advantes-title::before {
-	    content: "";
-	    display: block;
-	    /*position: absolute;*/
-	    background-repeat: no-repeat;
-	    background-size: contain;
-	    
-	
-
-	@media screen and (min-width: 320px) and (max-width: 767px) {
-	    top: -150px;
-	     width: 100%;
-	    height: 100%;
-	background-image: url(./images/advantages/icon1.png);
-	}
-	@media screen and (min-width: 768px) {
-	    top: -150px;
-	     width: 100%;
-	    height: 100%;
-	background-image: url(./images/advantages/icon1.png);
-	}
-	
-
-	@media screen and (min-width: 1280px) {
-	    top: -250px;
-	    width: 50px;
-	    height: 50px;
-	 background-image: url(./images/advantages/icon1.png);   
-	}
-	
-
-	}
-	
-
-	/*.products__item-coffee {
+/*.products__item-coffee {
 	display: block;
 	background: #F0D1A5;
 	position: relative;
 	}
-	
+
 
 	.products__item-coffee::before {
 	    content: "";
@@ -327,8 +386,8 @@
 	    position: absolute;
 	    background-repeat: no-repeat;
 	    background-size: contain;
-	    
-	
+
+
 
 	@media screen and (min-width: 320px) and (max-width: 767px) {
 	    top: -150px;
@@ -342,7 +401,7 @@
 	    height: 100%;
 	background-image: url(../images/products/ice-coffee/ice-coffee-tablet-440-min.png);
 	}
-	
+
 
 	@media screen and (min-width: 1280px) {
 	    top: -250px;
@@ -350,21 +409,21 @@
 	    height: 100%;
 	 background-image: url(../images/products/ice-coffee/ice-coffee-desctop-674-min.png);   
 	}
-	
+
 
 	}
-	
 
-	
 
-	
+
+
+
 
 	.products__item-milkshake {
 	display: block;
 	background: #C2E297;
 	position: relative;
 	}
-	
+
 
 	.products__item-milkshake::before {
 	    content: "";
@@ -372,8 +431,8 @@
 	    position: absolute;
 	    background-repeat: no-repeat;
 	    background-size: contain;
-	    
-	
+
+
 
 	@media screen and (min-width: 320px) and (max-width: 767px) {
 	    top: -150px;
@@ -387,7 +446,7 @@
 	    height: 100%;
 	background-image: url(../images/products/millkshakes/milkshakes-tablet-440-min.png);
 	}
-	
+
 
 	@media screen and (min-width: 1280px) {
 	    top: -250px;
@@ -395,12 +454,12 @@
 	    height: 100%;
 	 background-image: url(../images/products/millkshakes/milkshakes-desctop-670-min.png);   
 	}
-	
+
 
 	}
-	
 
-	
+
+
 
 	.products-item-title {
 	position: relative;
@@ -411,17 +470,17 @@
 	text-transform: uppercase;
 	color: var(--focus-white-color);
 	margin-bottom: 70px;
-	
 
-	
 
-	
+
+
+
 
 	@media screen and (min-width: 320px) and (max-width: 767px)  {
 	font-size: 20px;
 	line-height: 1.15;
 	padding-top: 160px;
-	
+
 
 	}
 	@media screen and (min-width: 768px) {
@@ -429,7 +488,7 @@
 	line-height: 1.15;
 	padding-top: 118px;
 	}
-	
+
 
 	@media screen and (min-width: 1280px) {
 	font-size: 30px;
@@ -437,7 +496,7 @@
 	padding-top: 165px;
 	}
 	}
-	
+
 
 	.products-item-title::after {
 	    content: "";
@@ -452,9 +511,9 @@
 	    height: 6px;
 	    left: 45%;
 	   bottom: -20%;
-	    
+
 	}
-	
+
 
 	.products-item-text {
 	font-family: 'DM Sans';
@@ -470,7 +529,7 @@
 	margin-right: auto;
 	margin-bottom: 32px;
 	}
-	
+
 
 	@media screen and (min-width: 768px) {
 	font-size: 14px;
@@ -480,7 +539,7 @@
 	margin-right: auto;
 	margin-bottom: 32px;
 	}
-	
+
 
 	@media screen and (min-width: 1280px) {
 	font-size: 16px;
@@ -491,7 +550,7 @@
 	margin-bottom: 60px;
 	}
 	}
-	
+
 
 	.products-info-btn {
 	    cursor: pointer;
@@ -506,11 +565,11 @@
 	  background-color: var(--focus-white-color);
 	  border-radius: 50%;
 	  border: 0.5px solid var(--focus-white-color);
-	
+
 
 	  transition: border var(--main-transition),
 	    background-color var(--main-transition);
-	
+
 
 	&:hover,
 	&:focus { 
@@ -522,14 +581,13 @@
 	  &:focus .products-icon {
 	    fill: var(--focus-white-color);
 	    transition: fill var(--main-transition);
-	     
+
 	  }
 	}
-	  
-	
 
-	
 
-	
-*/
 
+
+
+
+*//*# sourceMappingURL=index.css.map */

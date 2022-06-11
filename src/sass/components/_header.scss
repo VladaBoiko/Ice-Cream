@@ -38,6 +38,7 @@
         line-height: 1.31;
         color: var(--focus-white-color);
         transition: var(--main-transition);
+        z-index: 100;
     }
 
     &__link:hover,

@@ -23,6 +23,10 @@
             }
             background-position: 0 255px;
     }
+    @media screen and (min-width: 1280px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 .about-title-label {

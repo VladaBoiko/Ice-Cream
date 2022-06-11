@@ -87,8 +87,7 @@ picture {
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   margin: -1px;
 }
 
@@ -812,6 +811,37 @@ button {
   overflow: hidden;
 }
 
+.close-button {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+.close-button::after, .close-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  left: 0;
+  top: 50%;
+  transition: background-color var(--main-transition);
+}
+.close-button::before {
+  transform: rotate(45deg);
+}
+.close-button::after {
+  transform: rotate(-45deg);
+}
+.close-button:hover::after, .close-button:hover::before, .close-button:focus::after, .close-button:focus::before {
+  background-color: var(--pink-btn-hover);
+}
+
 .contacts {
   position: relative;
   padding-bottom: 48px;
@@ -838,7 +868,7 @@ button {
     background-image: url(../images/contacts/schedule-fon-1920.png-min.png);
   }
 }
-@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .contacts::before {
     background-image: url(../images/contacts/schedule-fon-3480-min.png);
   }
@@ -1104,18 +1134,20 @@ button {
   background-color: var(--white-btn-hover);
 }
 
-.backdrop-location {
+.backdrop {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 15px;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--main-transition);
+  overflow-y: scroll;
 }
-.backdrop-location--is-hidden {
+.backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -1123,17 +1155,17 @@ button {
 
 .modal-location {
   position: absolute;
-  padding: 30px 15px 15px 15px;
+  padding: 30px;
   display: flex;
-  flex-direction: column;
   top: 50%;
   left: 50%;
-  height: 80%;
-  width: 80%;
   transform: translate(-50%, -50%) scale(1);
   background-color: #e17992;
-  overflow: auto;
+  overflow-y: auto;
   border-radius: 30px;
+  height: 80%;
+  width: 80%;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .modal-location {
@@ -1143,36 +1175,6 @@ button {
     display: flex;
     gap: 30px;
   }
-}
-.modal-location__close-button {
-  display: block;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 15px;
-  height: 15px;
-  background: inherit;
-  border: none;
-  cursor: pointer;
-}
-.modal-location__close-button::after, .modal-location__close-button::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
-  left: 0;
-  top: 50%;
-  transition: background-color var(--main-transition);
-}
-.modal-location__close-button::before {
-  transform: rotate(45deg);
-}
-.modal-location__close-button::after {
-  transform: rotate(-45deg);
-}
-.modal-location__close-button:hover::after, .modal-location__close-button:hover::before, .modal-location__close-button:focus::after, .modal-location__close-button:focus::before {
-  background-color: var(--pink-btn-hover);
 }
 .modal-location__title {
   display: block;
@@ -1207,6 +1209,89 @@ button {
 }
 .address-location__item:not(:last-child) {
   margin-bottom: 15px;
+}
+
+.modal-franchise {
+  position: relative;
+  padding: 40px;
+  width: 100%;
+  background-color: #e17992;
+  overflow-y: auto;
+  border-radius: 30px;
+}
+@media screen and (min-width: 320px) {
+  .modal-franchise {
+    width: 290px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 650px) {
+  .modal-franchise {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal-franchise {
+    min-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-franchise {
+    min-width: 550px;
+  }
+}
+.modal-franchise__title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.modal-franchise__base {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .modal-franchise__full-name, .modal-franchise__contacts-info {
+    display: flex;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-franchise__field {
+    width: 225px;
+  }
+}
+.modal-franchise__label {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--focus-white-color);
+}
+.modal-franchise__input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.modal-franchise__text-area {
+  resize: none;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.modal-franchise__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {

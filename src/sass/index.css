@@ -89,7 +89,8 @@ picture {
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   margin: -1px;
 }
 
@@ -317,6 +318,14 @@ button {
   border: 1px solid var(--pink-btn-hover);
   outline: none;
 }
+.form-input::-moz-placeholder {
+  font-size: 12px;
+  color: rgba(199, 19, 62, 0.5);
+}
+.form-input:-ms-input-placeholder {
+  font-size: 12px;
+  color: rgba(199, 19, 62, 0.5);
+}
 .form-input::placeholder {
   font-size: 12px;
   color: rgba(199, 19, 62, 0.5);
@@ -348,6 +357,14 @@ button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   transition: border var(--main-transition);
+}
+.form-comment::-moz-placeholder {
+  font-size: 12px;
+  color: rgba(199, 19, 62, 0.5);
+}
+.form-comment:-ms-input-placeholder {
+  font-size: 12px;
+  color: rgba(199, 19, 62, 0.5);
 }
 .form-comment::placeholder {
   font-size: 12px;
@@ -801,6 +818,12 @@ button {
   }
 }
 
+@media screen and (min-width: 200px) and (max-width: 319px) {
+  .products {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products {
     padding-top: 80px;
@@ -880,8 +903,12 @@ button {
 }
 
 .products__list {
-  display: flex;
   align-content: center;
+}
+@media screen and (min-width: 200px) and (max-width: 319px) {
+  .products__list {
+    display: block;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__list {
@@ -891,17 +918,28 @@ button {
 @media screen and (min-width: 768px) {
   .products__list {
     margin-right: -16px;
+    display: flex;
   }
 }
 @media screen and (min-width: 1280px) {
   .products__list {
     margin-right: -32px;
+    display: flex;
   }
 }
 
 .products__item {
   display: block;
   border-radius: 24px;
+}
+@media screen and (min-width: 200px) and (max-width: 319px) {
+  .products__item {
+    width: 160px;
+    height: 430px;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item {
@@ -950,6 +988,14 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media screen and (min-width: 200px) and (max-width: 319px) {
+  .products__item-ice::before {
+    top: -100px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/products/ice-cream/ice-cream-mobail-249-min.png);
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item-ice::before {
     top: -150px;
@@ -987,6 +1033,14 @@ button {
   position: absolute;
   background-repeat: no-repeat;
   background-size: contain;
+}
+@media screen and (min-width: 200px) and (max-width: 319px) {
+  .products__item-coffee::before {
+    top: -100px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/products/ice-coffee/ice-coffee-mobail-249-min.png);
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item-coffee::before {
@@ -1026,6 +1080,14 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media screen and (min-width: 200px) and (max-width: 319px) {
+  .products__item-milkshake::before {
+    top: -100px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/products/millkshakes/milkshakes-mobail-249-min.png);
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item-milkshake::before {
     top: -150px;
@@ -1060,6 +1122,13 @@ button {
   text-transform: uppercase;
   color: var(--focus-white-color);
   margin-bottom: 70px;
+}
+@media screen and (min-width: 200px) and (max-width: 319px) {
+  .products-item-title {
+    font-size: 18px;
+    line-height: 1.15;
+    padding-top: 80px;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products-item-title {
@@ -1107,6 +1176,13 @@ button {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 32px;
+}
+@media screen and (min-width: 200px) and (max-width: 319px) {
+  .products-item-text {
+    font-size: 14px;
+    line-height: 1.52;
+    width: 150px;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products-item-text {
@@ -1163,7 +1239,7 @@ button {
   padding-bottom: 40px;
   background-color: #FFF5F6;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100vw;
 }
 @media screen and (max-width: 767px) {
   .about {
@@ -1171,7 +1247,7 @@ button {
     background-position: 0 574px;
   }
 }
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .about {
     background-image: url(../images/how-its-made/cow-fon-mobail-640.png);
   }
@@ -1182,7 +1258,7 @@ button {
     background-position: 0 255px;
   }
 }
-@media screen and (min-width: 950px) and (min-device-pixel-ratio: 2), screen and (min-width: 950px) and (min-resolution: 192dpi), screen and (min-width: 950px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 950px) and (min-device-pixel-ratio: 2), screen and (min-width: 950px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 950px) and (min-resolution: 192dpi), screen and (min-width: 950px) and (min-resolution: 2dppx) {
   .about {
     background-image: url(../images/how-its-made/cow-fon-desctop-2560.png);
   }
@@ -1495,12 +1571,12 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-  .recepie-item:not(:last-child) {
+  .advantages-item:not(:last-child) {
     margin-bottom: 38px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1080px) {
-  .recepie-item:not(:last-child) {
+  .advantages-item:not(:last-child) {
     margin-right: 60px;
   }
 }
@@ -1708,6 +1784,11 @@ button {
   }
 }
 
+@media screen and (max-width: 319px) {
+  .slider {
+    display: none;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .slider {
     height: 650px;
@@ -2078,7 +2159,7 @@ button {
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .contacts {
     background-image: url(../images/contacts/schedule-fon-1920.png-min.png), linear-gradient(to bottom, var(--focus-white-color) 13.5%, #fff5f6 13.5%, #fff5f6 100%);
   }
@@ -2459,6 +2540,16 @@ button {
   transition: border-color var(--main-transition), box-shadow var(--main-transition);
   color: var(--focus-pinc-color);
 }
+.modal-franchise__input::-moz-placeholder {
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(212, 20, 68, 0.444);
+}
+.modal-franchise__input:-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(212, 20, 68, 0.444);
+}
 .modal-franchise__input::placeholder {
   font-weight: 700;
   font-size: 13px;
@@ -2480,6 +2571,16 @@ button {
   border-radius: 10px;
   transition: border-color var(--main-transition), box-shadow var(--main-transition);
   color: var(--focus-pinc-color);
+}
+.modal-franchise__text-area::-moz-placeholder {
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(212, 20, 68, 0.444);
+}
+.modal-franchise__text-area:-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(212, 20, 68, 0.444);
 }
 .modal-franchise__text-area::placeholder {
   font-weight: 700;
@@ -2587,6 +2688,8 @@ button {
 }
 .footer__link:hover, .footer__link:focus {
   background-color: var(--focus-pinc-color);
+  -webkit-animation: animate125 1000ms infinite 10ms;
+          animation: animate125 1000ms infinite 10ms;
 }
 .footer__icon-first {
   width: 19px;
@@ -2668,5 +2771,29 @@ button {
   .footer__copyright-text {
     line-height: 1.86;
     letter-spacing: 0.02em;
+  }
+}
+
+@-webkit-keyframes animate125 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animate125 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=index.css.map */

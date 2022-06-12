@@ -1571,12 +1571,12 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-  .recepie-item:not(:last-child) {
+  .advantages-item:not(:last-child) {
     margin-bottom: 38px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1080px) {
-  .recepie-item:not(:last-child) {
+  .advantages-item:not(:last-child) {
     margin-right: 60px;
   }
 }
@@ -2053,8 +2053,58 @@ button {
   display: none;
 }
 
-.noscroll {
-  overflow: hidden;
+.button {
+  font-family: inherit;
+  width: 161px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: var(--focus-white-color);
+  transition: background-color var(--main-transition);
+}
+.button__icon {
+  display: inline-block;
+  margin-left: 8px;
+  width: 8px;
+  height: 10px;
+  fill: currentColor;
+}
+.button--red {
+  background-color: var(--focus-pinc-color);
+  color: var(--focus-white-color);
+}
+@media screen and (min-width: 768px) {
+  .button--red {
+    width: 192px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button--red {
+    width: 198px;
+  }
+}
+.button--red:hover, .button--red:focus {
+  background-color: var(--pink-btn-hover);
+}
+.button--white {
+  background-color: var(--focus-white-color);
+  color: var(--focus-pinc-color);
+}
+@media screen and (min-width: 768px) {
+  .button--white {
+    width: 174px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button--white {
+    width: 180px;
+  }
+}
+.button--white:hover, .button--white:focus {
+  background-color: var(--white-btn-hover);
 }
 
 .close-button {
@@ -2091,35 +2141,16 @@ button {
 .contacts {
   position: relative;
   padding-bottom: 48px;
-  min-width: 320px;
+  min-width: 200px;
   background-image: linear-gradient(to bottom, var(--focus-white-color) 22.4%, #fff5f6 22.4%, #fff5f6 100%);
 }
 @media screen and (min-width: 768px) {
   .contacts {
     padding-bottom: 40px;
+    background-image: linear-gradient(to bottom, var(--focus-white-color) 19.3%, #fff5f6 19.3%, #fff5f6 100%);
   }
 }
 @media screen and (min-width: 1280px) {
-  .contacts {
-    padding-bottom: 120px;
-    background-image: linear-gradient(to bottom, var(--focus-white-color) 13.5%, #fff5f6 13.5%, #fff5f6 100%);
-  }
-  .contacts::before {
-    content: "";
-    position: absolute;
-    top: 141px;
-    left: 0;
-    height: 382px;
-    width: 100%;
-    background-image: url(../images/contacts/schedule-fon-1920.png-min.png);
-  }
-}
-@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
-  .contacts::before {
-    background-image: url(../images/contacts/schedule-fon-3480-min.png);
-  }
-}
-@media screen and (min-width: 768px) {
   .contacts {
     padding-bottom: 120px;
     background-image: url(../images/contacts/schedule-fon-1920.png-min.png), linear-gradient(to bottom, var(--focus-white-color) 13.5%, #fff5f6 13.5%, #fff5f6 100%);
@@ -2128,13 +2159,18 @@ button {
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .contacts {
     background-image: url(../images/contacts/schedule-fon-1920.png-min.png), linear-gradient(to bottom, var(--focus-white-color) 13.5%, #fff5f6 13.5%, #fff5f6 100%);
   }
 }
 .contacts__container {
   padding: 0 15px;
+}
+@media screen and (max-width: 320px) {
+  .contacts__container {
+    min-width: 200px;
+  }
 }
 .contacts__body {
   margin-bottom: 32px;
@@ -2165,7 +2201,7 @@ button {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .list-contacts {
     display: flex;
     flex-wrap: wrap;
@@ -2178,17 +2214,12 @@ button {
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 }
-@media screen and (min-width: 480px) {
-  .list-contacts__item {
-    flex-basis: calc((100% - 32px) / 2);
-  }
-}
 @media screen and (min-width: 768px) {
   .list-contacts__item {
     flex-basis: calc((100% - 64px) / 3);
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .list-contacts__item:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -2209,7 +2240,6 @@ button {
   text-transform: uppercase;
   color: var(--focus-white-color);
   margin-bottom: 20px;
-  color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .list-contacts__category {
@@ -2331,69 +2361,13 @@ button {
   }
 }
 
-.button {
-  font-family: inherit;
-  width: 161px;
-  height: 44px;
-  border-radius: 22px;
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  color: var(--focus-white-color);
-  transition: box-shadow var(--main-transition), background-color var(--main-transition);
-}
-.button:hover, .button:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.button__icon {
-  display: inline-block;
-  margin-left: 8px;
-  width: 8px;
-  height: 10px;
-  fill: currentColor;
-}
-.button--red {
-  background-color: var(--focus-pinc-color);
-  color: var(--focus-white-color);
-}
-@media screen and (min-width: 768px) {
-  .button--red {
-    width: 192px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .button--red {
-    width: 198px;
-  }
-}
-.button--red:hover, .button--red:focus {
-  background-color: var(--pink-btn-hover);
-}
-.button--white {
-  background-color: var(--focus-white-color);
-  color: var(--focus-pinc-color);
-}
-@media screen and (min-width: 768px) {
-  .button--white {
-    width: 174px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .button--white {
-    width: 180px;
-  }
-}
-.button--white:hover, .button--white:focus {
-  background-color: var(--white-btn-hover);
-}
-
 .backdrop {
   position: fixed;
   z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
+  min-width: 200px;
   height: 100%;
   padding: 15px;
   background: rgba(0, 0, 0, 0.2);
@@ -2420,6 +2394,11 @@ button {
   height: 80%;
   width: 80%;
   flex-direction: column;
+}
+@media screen and (max-width: 320px) {
+  .modal-location {
+    padding: 30px 10px 10px 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .modal-location {
@@ -2454,7 +2433,6 @@ button {
 }
 
 .address-location {
-  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -2462,17 +2440,33 @@ button {
   letter-spacing: 0.04em;
   color: var(--focus-white-color);
 }
+@media screen and (max-width: 320px) {
+  .address-location {
+    line-height: 1.15;
+  }
+}
 .address-location__item:not(:last-child) {
   margin-bottom: 15px;
+}
+@media screen and (min-width: 200px) and (max-width: 320px) {
+  .address-location__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .modal-franchise {
   position: relative;
   padding: 40px;
+  min-width: 200px;
   width: 100%;
   background-color: #e17992;
   overflow-y: auto;
   border-radius: 30px;
+}
+@media screen and (max-width: 319px) {
+  .modal-franchise {
+    padding: 35px 10px 20px 10px;
+  }
 }
 @media screen and (min-width: 320px) {
   .modal-franchise {
@@ -2694,6 +2688,8 @@ button {
 }
 .footer__link:hover, .footer__link:focus {
   background-color: var(--focus-pinc-color);
+  -webkit-animation: animate125 1000ms infinite 10ms;
+          animation: animate125 1000ms infinite 10ms;
 }
 .footer__icon-first {
   width: 19px;
@@ -2775,5 +2771,29 @@ button {
   .footer__copyright-text {
     line-height: 1.86;
     letter-spacing: 0.02em;
+  }
+}
+
+@-webkit-keyframes animate125 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animate125 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=index.css.map */

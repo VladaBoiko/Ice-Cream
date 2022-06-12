@@ -1,4 +1,7 @@
-.slider-box {
+.slider {
+  @media screen and (max-width: 319px) {
+    display: none;
+  }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     height: 650px;
     margin-top: 80px;
@@ -15,7 +18,7 @@
   }
 }
 
-.slider {
+.slider3 {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     top: 52px;
   }
@@ -85,16 +88,17 @@
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
-  background: repeating-linear-gradient(
-    #fafafa,
-    #fafafa 26px,
-    #e1e1e1 29px,
-    #e1e1e1 0
-  );
+
   @media screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
     line-height: 2.45;
     padding: 0px 6px;
+    background: repeating-linear-gradient(
+      #fafafa,
+      #fafafa 26px,
+      #e1e1e1 29px,
+      #e1e1e1 0
+    );
   }
 
   @media screen and (min-width: 768px) and (max-width: 1249px) {
@@ -106,9 +110,22 @@
     background-position: 14px 26px;
     margin-left: auto;
     margin-right: auto;
+
+    background: repeating-linear-gradient(
+      #fafafa,
+      #fafafa 26px,
+      #e1e1e1 29px,
+      #e1e1e1 0
+    );
   }
 
   @media screen and (min-width: 1250px) {
+    background: repeating-linear-gradient(
+      #fafafa,
+      #fafafa 26px,
+      #e1e1e1 29px,
+      #e1e1e1 0
+    );
     margin: 0;
     margin-top: 16px;
     padding: 0px 50px;
@@ -186,20 +203,21 @@
   }
 }
 
+/* Слайдер с точками */
 .slick-slider.slick-dotted {
   margin-top: 0;
 }
 
-.slider .slick-dots {
+.slider3 .slick-dots {
   bottom: inherit;
 }
 
-.slider .slick-dots li {
+.slider3 .slick-dots li {
   width: 18px;
   height: 18px;
 }
 
-.slider .slick-dots li button {
+.slider3 .slick-dots li button {
   width: 12px;
   height: 12px;
   background-color: #d9d9d9;
@@ -207,7 +225,7 @@
   padding: 0;
 }
 
-.slider .slick-dots li button {
+.slider3 .slick-dots li button {
   width: 12px;
   height: 12px;
   background-color: #d9d9d9;
@@ -215,7 +233,7 @@
   padding: 0;
 }
 
-.slider .slick-dots .slick-active button {
+.slider3 .slick-dots .slick-active button {
   width: 12px;
   height: 12px;
   padding: 0;
@@ -227,14 +245,14 @@
   background-color: none;
 }
 
-.slider .slick-active button::before {
+.slider3 .slick-active button::before {
   display: none;
 }
 
-.slider .slick-dots {
+.slider3 .slick-dots {
   margin-top: 10px;
 }
 
-.slider .slick-dots li button::before {
+.slider3 .slick-dots li button::before {
   display: none;
 }

@@ -73,12 +73,27 @@
   }
   @media screen and (min-width: 768px) {
     padding-bottom: 120px;
-    background-image: linear-gradient(
-      to bottom,
-      var(--focus-white-color) 19.3%,
-      #fff5f6 19.3%,
-      #fff5f6 100%
-    );
+    background-image: url(../images/contacts/schedule-fon-1920.png-min.png),
+      linear-gradient(
+        to bottom,
+        var(--focus-white-color) 13.5%,
+        #fff5f6 13.5%,
+        #fff5f6 100%
+      );
+    background-position: 50% 35%, center;
+    background-size: 1920px 382px, 100%;
+    background-repeat: no-repeat;
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/schedule-fon-1920.png-min.png),
+        linear-gradient(
+          to bottom,
+          var(--focus-white-color) 13.5%,
+          #fff5f6 13.5%,
+          #fff5f6 100%
+        );
+    }
   }
   background-image: linear-gradient(
     to bottom,

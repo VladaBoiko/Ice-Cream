@@ -18,7 +18,7 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 1px;
+    height: 2px;
     background-color: #fff;
     left: 0;
     top: 50%;
@@ -366,9 +366,6 @@
   }
 }
 
-.modal {
-}
-
 .modal-location {
   position: absolute;
   padding: 30px;
@@ -403,6 +400,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--focus-white-color);
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.36);
   }
   &__address {
     @media screen and (max-width: 767px) {
@@ -435,10 +433,6 @@
   }
 }
 
-.is-hidden {
-}
-.js-franchise-modal {
-}
 .modal-franchise {
   position: relative;
   padding: 40px;
@@ -452,6 +446,7 @@
     position: absolute;
     top: 15px;
     left: 50%;
+    transform: translate(-50%, 0);
     @media screen and (min-height: 650px) {
       top: 50%;
       transform: translate(-50%, -50%);
@@ -469,20 +464,18 @@
   // .modal-franchise__contaner
 
   &__title {
+    display: block;
+    margin-bottom: 10px;
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
-
-    /* identical to box height */
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
-    color: #ffffff;
-  }
-  &__form {
+    color: var(--focus-white-color);
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.36);
   }
   // .modal-franchise__base
   &__base {
@@ -497,6 +490,7 @@
   }
   // .modal-franchise__field
   &__field {
+    margin-bottom: 10px;
     @media screen and (min-width: 768px) {
       width: 225px;
     }
@@ -514,6 +508,24 @@
     height: 40px;
     padding: 10px;
     border-radius: 10px;
+    border: 1px solid rgba(199, 19, 61, 0.5);
+    box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.6);
+    transition: border-color var(--main-transition),
+      box-shadow var(--main-transition);
+    color: var(--focus-pinc-color);
+    &::placeholder {
+      font-weight: 700;
+      font-size: 13px;
+      color: rgba(212, 20, 68, 0.444);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: var(--pink-btn-hover);
+      box-shadow: inset 2px 2px 3px -1px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      outline: none;
+    }
   }
   // .modal-franchise__text-area
   &__text-area {
@@ -522,11 +534,29 @@
 
     height: 80px;
     padding: 10px;
+    border: 1px solid rgba(199, 19, 61, 0.5);
+    box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.6);
+
     border-radius: 10px;
+    transition: border-color var(--main-transition),
+      box-shadow var(--main-transition);
+    color: var(--focus-pinc-color);
+    &::placeholder {
+      font-weight: 700;
+      font-size: 13px;
+      color: rgba(212, 20, 68, 0.444);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: var(--pink-btn-hover);
+      box-shadow: inset 2px 2px 3px -1px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      outline: none;
+    }
   }
   // .modal-franchise__body
-  &__body {
-  }
+
   &__button {
     display: block;
     margin-left: auto;

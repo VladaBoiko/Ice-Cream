@@ -1,0 +1,101 @@
+.gallery{
+    display: flex;
+    justify-content: center;
+    &-main{
+    background-image: linear-gradient(to top, var(--focus-white-color) 55%, #fff5f6 45%);
+    }
+   &__content{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+      
+       
+       &-four{
+        margin-top: 15px;
+        @media screen and (min-width:768px){
+            margin-top: 25px;
+         }
+        @media screen and (min-width:1280px){
+           margin-top: 55px;
+        }
+       }
+       &-five{
+           margin-bottom: 15px;
+           @media screen and (min-width:768px){
+            margin-bottom: 25px;
+         }
+        @media screen and (min-width:1280px){
+
+           margin-bottom: 35px;
+        }
+       }
+       &-six{
+           margin-top: 5px;
+       }
+       
+   }
+   &__content:not(:last-child){
+       margin-right: 3px;
+       @media screen and (min-width:1280px) {
+           margin-right: 5px;
+       }
+   }
+
+    &__img{
+        border-radius: 4px;
+        width: 35px;
+        height: 35px;
+        
+        
+        transition: overflow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 1250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+
+        &:hover,
+        &:focus{
+            overflow: hidden;
+            border-radius: 45px;
+            transform: scale(1.5);
+            border: 7px double var(--accent-salmon-color);
+            z-index: 3;
+        }
+        @media screen and (min-width:480px) {
+            width: 60px;
+            height: 60px;
+        }
+        @media screen and (min-width:768px) {
+            width: 78px;
+            height: 78px;
+        }
+        @media screen and (min-width:1280px) {
+            width: 140px;
+            height: 140px;
+        }
+        &-top{
+            margin-top: 3px;
+            @media screen and (min-width:1280px) {
+                margin-top: 5px;
+            }
+        }
+        &-big{
+            width: 70px;
+            height: 70px;
+            @media screen and (min-width:480px) {
+                width: 120px;
+                height: 120px;
+            }
+            @media screen and (min-width:768px) {
+                width: 156px;
+                height: 156px;
+            }
+            @media screen and (min-width:1280px) {
+                width: 280px;
+                height: 280px;
+            }
+          
+        }
+      
+    }
+}

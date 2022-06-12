@@ -23,9 +23,13 @@
             }
             background-position: 0 255px;
     }
+    @media screen and (min-width: 1280px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
-.about-title-label {
+.about-label {
     font-family: 'Titan One';
     display: block;
     font-weight: 400;
@@ -153,4 +157,111 @@
     margin-left: 8px;
     display: inline-block;
     fill: currentColor;
+}
+
+
+.about-modal {
+    width: 90vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #e17992;
+    border-radius: 30px;
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+    transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 95%;
+    background-image: url(../images/how-its-made/cow-fon-mobail-320.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/how-its-made/cow-fon-mobail-640.png);
+   
+
+    }
+    .backdrop.is-hidden & {
+        transform: scale(0.5) rotate(40deg);
+    }
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        height: 609px;
+    }
+    @media screen and (min-width: 1280px) {
+    height: 581px;
+    width: 528px;
+    }
+    &__title {
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: var(--focus-white-color);
+        margin-bottom: 30px;
+        font-family: Titan One;
+        font-size: 30px;
+        line-height: 1.15;
+        text-align: center;
+    }
+    &__text {
+        color: var(--text-black-color);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.76;
+        margin-bottom: 30px;
+    }
+    &__btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        
+    }
+    
+    &__icon {
+        transition:transform var( --main-transition);
+        &:hover {
+            fill: var(--focus-pinc-color);
+        }
+    }
+}
+
+.modal-list {
+    list-style: disc;
+    &__title {
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: var(--focus-pinc-color);
+        margin-bottom: 20px;
+        font-family: Titan One;
+        font-size: 20px;
+        line-height: 1.15;
+        margin-left: 50px;
+    }
+    &__item {
+        margin-left: 50px;
+    }
+    &__text {
+        color: var(--text-black-color);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.76;
+        width: 70%;
+    }
+}
+
+.backdrop {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity var(--main-transition), visibility var(--main-transition);
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }

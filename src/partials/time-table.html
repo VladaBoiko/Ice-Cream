@@ -1,4 +1,4 @@
-<section class="contacts section">
+<section id="contacts" class="contacts section">
   <div class="contacts__container container">
     <h2 class="contacts__title visually-hidden">Contacts</h2>
     <div class="contacts__body">
@@ -104,8 +104,7 @@
     <div class="contacts__buttons">
       <button
         type="button"
-        class="contacts__button button button--red"
-        data-open-modal-locations
+        class="contacts__button button button--red js-location-modal-open"
       >
         Our Locations
         <svg class="button__icon">
@@ -114,8 +113,7 @@
       </button>
       <button
         type="button"
-        class="contacts__button button button--white"
-        data-open-modal-franchise
+        class="contacts__button button button--white js-franchise-modal-open"
       >
         Franchise
         <svg class="button__icon">
@@ -126,18 +124,11 @@
   </div>
 </section>
 
-<div
-  class="backdrop backdrop-location backdrop-location--is-hidden"
-  data-modal-locations
->
-  <div class="modal-location">
-    <button
-      type="button"
-      class="modal-location__close-button"
-      data-modal-close-locations
-    ></button>
+<div class="backdrop is-hidden js-location-modal">
+  <div class="modal modal-location">
+    <button type="button" class="close-button js-location-modal-close"></button>
     <div class="modal-location__body">
-      <span class="modal-location__title">Locations</span>
+      <span class="modal-location__title">Location</span>
       <address class="modal-location__address address-location">
         <ul class="address-location__list">
           <li class="address-location__item">
@@ -148,17 +139,6 @@
         </ul>
       </address>
     </div>
-    <!-- <div class="modal-location__map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230677.93839995828!2d-118.31727517778424!3d34.06446797625815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1654858180458!5m2!1sru!2sua"
-        width="50%"
-        height="400px"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div> -->
     <div id="map" class="modal-location__map"></div>
 
     <script>
@@ -180,30 +160,80 @@
   </div>
 </div>
 
-<!-- <div class="backdrop backdrop--is-hidden" data-modal-franchise>
-  <div class="modal">
+<div class="backdrop is-hidden js-franchise-modal">
+  <div class="modal modal-franchise">
     <button
       type="button"
-      class="modal__close-button"
-      data-close-modal-franchise
-    >
-      Закрыть
-    </button>
-    <strong class="modal__title">Our franchise</strong>
-    <p class="modal__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aut
-      suscipit enim perspiciatis officiis tempora accusamus officia ipsum unde
-      maiores!
-    </p>
-    <p class="modal__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aut
-      suscipit enim perspiciatis officiis tempora accusamus officia ipsum unde
-      maiores!
-    </p>
-    <p class="modal__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aut
-      suscipit enim perspiciatis officiis tempora accusamus officia ipsum unde
-      maiores!
-    </p>
+      class="close-button js-franchise-modal-close"
+    ></button>
+    <div class="modal-franchise__container">
+      <strong class="modal-franchise__title"
+        >Request Franchise Information</strong
+      >
+      <form class="modal-franchise__form" autocomplete="off">
+        <div class="modal-franchise__base">
+          <div class="modal-franchise__full-name">
+            <label class="modal-franchise__field">
+              <span class="modal-franchise__label">First Name</span>
+              <input
+                type="text"
+                name="name"
+                class="modal-franchise__input"
+                placeholder="John"
+              />
+            </label>
+            <label class="modal-franchise__field">
+              <span class="modal-franchise__label">Last Name</span>
+              <input
+                type="text"
+                name="name"
+                class="modal-franchise__input"
+                placeholder="Smith"
+              />
+            </label>
+          </div>
+          <div class="modal-franchise__contacts-info">
+            <label class="modal-franchise__field">
+              <span class="modal-franchise__label">Phone number</span>
+              <input
+                type="tel"
+                name="text"
+                class="modal-franchise__input"
+                placeholder="+1 212-674-5377"
+              />
+            </label>
+            <label class="modal-franchise__field">
+              <span class="modal-franchise__label">E-Mail</span>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="modal-franchise__input"
+                placeholder="email@email.com"
+              />
+            </label>
+          </div>
+
+          <label class="modal-franchise__field">
+            <span class="modal-franchise__label">Leave your message</span>
+            <textarea
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder="Tell us about yourself"
+              class="modal-franchise__text-area"
+            ></textarea>
+          </label>
+        </div>
+
+        <button
+          type="submit"
+          class="button button--white modal-franchise__button"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="modal-franchise__body"></div>
   </div>
-</div> -->
+</div>

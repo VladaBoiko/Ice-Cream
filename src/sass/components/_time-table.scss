@@ -115,8 +115,8 @@
         #fff5f6 13.5%,
         #fff5f6 100%
       );
-    background-position: 50% 35%;
-    background-size: 1920px 382px;
+    background-position: 50% 35%, center;
+    background-size: 1920px 382px, 100%;
     background-repeat: no-repeat;
     @media screen and (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),

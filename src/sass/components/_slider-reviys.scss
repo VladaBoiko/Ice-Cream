@@ -1,6 +1,6 @@
 .slider {
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    height: 620px;
+    height: 650px;
     margin-top: 80px;
   }
 
@@ -12,38 +12,6 @@
   @media screen and (min-width: 1250px) {
     height: 475px;
     margin-top: 120px;
-  }
-}
-
-.slider .slider1 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 85px;
-}
-
-.slider2 {
-  background-color: #fafafa;
-
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 280px;
-    padding: 37px 53px;
-    top: 32px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1249px) {
-    width: 620px;
-    padding: 20px 6px 36px 6px;
-    left: 55px;
-    top: 16;
-  }
-
-  @media screen and (min-width: 1250px) {
-    width: 1034px;
-    padding: 32px 107px 32px 106px;
-    left: 106px;
-    top: 16px;
   }
 }
 
@@ -61,18 +29,44 @@
   }
 }
 
-.slider2::before {
+.customer__photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    position: absolute;
-    content: '';
-    width: 54px;
-    height: 40px;
-    z-index: 1;
-    background-image: url(../images/slider-birds.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 26px;
-    left: 46px;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1250px) {
+    margin-bottom: 16px;
+  }
+}
+
+.comment__container {
+  background-color: #fafafa;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding: 74px 50px 17px 50px;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    padding: 32px 6px;
+    width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1250px) {
+    padding: 32px 106px;
+    width: 1034px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -81,7 +75,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 186%;
+  line-height: 1.86;
   text-align: center;
   letter-spacing: 0.04em;
   color: var(--text-black-color);
@@ -90,10 +84,11 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
-    line-height: 245%;
+    line-height: 2.45;
     padding: 0px 6px;
     background: repeating-linear-gradient(
       #fafafa,
@@ -105,7 +100,7 @@
 
   @media screen and (min-width: 768px) and (max-width: 1249px) {
     font-size: 14px;
-    line-height: 216%;
+    line-height: 2.16;
     margin: 0;
     margin-top: 20px;
     padding: 0px 46px;
@@ -142,12 +137,12 @@
   background-image: url(../images/slider-birds.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: -1;
   top: -10px;
   left: 5px;
+  z-index: -1;
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    display: none;
+    left: -3px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1249px) {
@@ -157,7 +152,24 @@
 
   @media screen and (min-width: 1250px) {
     top: -10px;
-    left: 5px;
+    left: 3px;
+  }
+}
+
+.decoration__points {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-top: 16px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    margin-top: 4px;
+  }
+
+  @media screen and (min-width: 1250px) {
+    margin-top: 16px;
   }
 }
 
@@ -170,7 +182,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 186%;
+  line-height: 1.86;
   text-align: center;
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -188,49 +200,9 @@
   }
 }
 
-.slider1 {
-  min-width: 0;
-}
-
 /* Слайдер с точками */
 .slick-slider.slick-dotted {
   margin-top: 0;
-}
-
-.slider2 .slick-dots {
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    margin-top: 26px;
-    margin-left: -53px;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1249px) {
-    margin-top: 24px;
-    margin-left: -16px;
-  }
-
-  @media screen and (min-width: 1250px) {
-    margin-top: auto;
-    margin-left: auto;
-    right: -2px;
-  }
-}
-
-.slider2 .slick-dots li {
-  width: 10px;
-  height: 10px;
-  top: 12px;
-}
-
-.slider2 .slick-dots li button {
-  width: 4px;
-  height: 4px;
-  background-color: var(--pink-btn-hover);
-  border-radius: 50%;
-  padding: 0;
-}
-
-.slider2 .slick-dots li button::before {
-  display: none;
 }
 
 .slider3 .slick-dots {

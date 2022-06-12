@@ -91,34 +91,14 @@
   position: relative;
   padding-bottom: 48px;
   min-width: 200px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--focus-white-color) 22.4%,
+    #fff5f6 22.4%,
+    #fff5f6 100%
+  );
   @media screen and (min-width: 768px) {
     padding-bottom: 40px;
-  }
-  @media screen and (min-width: 1280px) {
-    padding-bottom: 120px;
-    background-image: linear-gradient(
-      to bottom,
-      var(--focus-white-color) 13.5%,
-      #fff5f6 13.5%,
-      #fff5f6 100%
-    );
-    &::before {
-      content: '';
-      position: absolute;
-      top: 141px;
-      left: 0;
-      height: 382px;
-      width: 100%;
-      background-image: url(../images/contacts/schedule-fon-1920.png-min.png);
-      @media screen and (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url(../images/contacts/schedule-fon-3480-min.png);
-      }
-    }
-  }
-  @media screen and (min-width: 768px) {
-    padding-bottom: 120px;
     background-image: linear-gradient(
       to bottom,
       var(--focus-white-color) 19.3%,
@@ -126,12 +106,30 @@
       #fff5f6 100%
     );
   }
-  background-image: linear-gradient(
-    to bottom,
-    var(--focus-white-color) 22.4%,
-    #fff5f6 22.4%,
-    #fff5f6 100%
-  );
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+    background-image: url(../images/contacts/schedule-fon-1920.png-min.png),
+      linear-gradient(
+        to bottom,
+        var(--focus-white-color) 13.5%,
+        #fff5f6 13.5%,
+        #fff5f6 100%
+      );
+    background-position: 50% 35%;
+    background-size: 1920px 382px;
+    background-repeat: no-repeat;
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/schedule-fon-1920.png-min.png),
+        linear-gradient(
+          to bottom,
+          var(--focus-white-color) 13.5%,
+          #fff5f6 13.5%,
+          #fff5f6 100%
+        );
+    }
+  }
   &__container {
     padding: 0 15px;
     @media screen and (max-width: 320px) {

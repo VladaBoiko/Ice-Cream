@@ -1,22 +1,24 @@
-.slyder {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  justify-content: center;
-  height: 500px;
-
+.slider {
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    height: 700px;
+    height: 620px;
+    margin-top: 80px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1249px) {
+    height: 480px;
+    margin-top: 80px;
+  }
+
+  @media screen and (min-width: 1250px) {
+    height: 475px;
+    margin-top: 120px;
   }
 }
 
-.customer {
-}
-
-.customer__photo {
-  display: flex;
-  min-width: 0;
-  justify-content: center;
+.slider .slider1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85px;
 }
 
 .slider2 {
@@ -26,13 +28,15 @@
     width: 280px;
     padding: 37px 53px;
     top: 32px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1249px) {
     width: 620px;
     padding: 20px 6px 36px 6px;
     left: 55px;
-    top: 20;
+    top: 16;
   }
 
   @media screen and (min-width: 1250px) {
@@ -64,7 +68,7 @@
     width: 54px;
     height: 40px;
     z-index: 1;
-    background-image: url(/src/images/slider-birds.svg);
+    background-image: url(../images/slider-birds.svg);
     background-repeat: no-repeat;
     background-size: contain;
     top: 26px;
@@ -72,7 +76,7 @@
   }
 }
 
-.suctomer__comment {
+.customer__comment {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
@@ -82,14 +86,7 @@
   letter-spacing: 0.04em;
   color: var(--text-black-color);
   text-align: center;
-  // text-decoration: underline;
-  // text-underline-offset: 10px;
-  // text-decoration-color: #e1e1e1;
   background-color: #fafafa;
-  // background-image: url(/src/images/slider-birds.svg);
-  // background-repeat: no-repeat;
-  // background-size: 54px 40px;
-  // padding: 0px 37px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -137,12 +134,12 @@
   }
 }
 
-.suctomer__comment::before {
+.customer__comment::before {
   position: absolute;
   content: '';
   width: 54px;
   height: 40px;
-  background-image: url(/src/images/slider-birds.svg);
+  background-image: url(../images/slider-birds.svg);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -195,84 +192,33 @@
   min-width: 0;
 }
 
-/* Слайдер */
-.slick-slider {
-}
-/* Слайдер запущен */
-.slick-slider.slick-initialized {
-}
 /* Слайдер с точками */
 .slick-slider.slick-dotted {
-  margin: 0;
-}
-/* Ограничивающая оболочка */
-.slick-list {
-}
-/* Лента слайдов */
-.slick-track {
-}
-/* Слайд */
-.slick-slide {
-}
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {
-  display: flex;
-  min-width: 0;
-  justify-content: center;
-}
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-/* Слайд по центру */
-.slick-slide.slick-center {
-}
-/* Клонированный слайд */
-.slick-slide.slick-cloned {
-}
-/* Стрелка */
-.slick-arrow {
-}
-/* Стрелка влево */
-.slick-arrow.slick-prev {
-}
-/* Стрелка вправо */
-.slick-arrow.slick-next {
-}
-/* Стрелка не активная */
-.slick-arrow.slick-disabled {
-}
-/* Точки (булиты) */
-.slick-dots {
-}
-
-.slider2 {
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    left: 80px;
-  }
+  margin-top: 0;
 }
 
 .slider2 .slick-dots {
-  bottom: inherit;
-
   @media screen and (min-width: 320px) and (max-width: 767px) {
     margin-top: 26px;
     margin-left: -53px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1249px) {
-    margin-top: 10px;
-    margin-left: -18px;
+    margin-top: 24px;
+    margin-left: -16px;
   }
 
   @media screen and (min-width: 1250px) {
-    margin-top: 26px;
-    margin-left: -105px;
+    margin-top: auto;
+    margin-left: auto;
+    right: -2px;
   }
 }
 
 .slider2 .slick-dots li {
   width: 10px;
   height: 10px;
+  top: 12px;
 }
 
 .slider2 .slick-dots li button {
@@ -281,7 +227,6 @@
   background-color: var(--pink-btn-hover);
   border-radius: 50%;
   padding: 0;
-  margin-top: 30px;
 }
 
 .slider2 .slick-dots li button::before {
@@ -319,7 +264,7 @@
   padding: 0;
   background-color: white;
   border-radius: 0;
-  background-image: url(/src/images/slyder/home.png);
+  background-image: url(../images/slyder/home.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: none;
@@ -335,13 +280,4 @@
 
 .slider3 .slick-dots li button::before {
   display: none;
-}
-
-.slick-dots li {
-}
-/* Активная точка */
-.slick-dots li.slick-active {
-}
-/* Элемент точки */
-.slick-dots li button {
 }

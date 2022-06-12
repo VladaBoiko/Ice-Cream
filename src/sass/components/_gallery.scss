@@ -1,8 +1,9 @@
 .gallery{
     display: flex;
     justify-content: center;
+    &-main{
     background-image: linear-gradient(to top, var(--focus-white-color) 55%, #fff5f6 45%);
-
+    }
    &__content{
        display: flex;
        flex-direction: column;
@@ -45,18 +46,19 @@
         width: 35px;
         height: 35px;
         
+        
         transition: overflow 250ms cubic-bezier(0.4, 0, 0.2, 1),
                     border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                    transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 1250ms cubic-bezier(0.4, 0, 0.2, 1),
                     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
 
         &:hover,
         &:focus{
             overflow: hidden;
-            border-radius: 22px;
+            border-radius: 45px;
             transform: scale(1.5);
-            border: 3px solid var(--accent-salmon-color);
+            border: 7px double var(--accent-salmon-color);
             z-index: 3;
         }
         @media screen and (min-width:480px) {

@@ -1,6 +1,8 @@
 .hero {
   background-color: var(--bcg-pink-color);
+}
 
+.hero .container {
   position: relative;
   padding-top: 194px;
   padding-bottom: 158px;
@@ -28,10 +30,16 @@
   font-family: 'Titan One', sans-serif;
   font-weight: 400;
   font-size: 26px;
-  line-height: 1.15;
+  line-height: 1.14;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--focus-white-color);
+
+  @media screen and (max-width: 320px) {
+    max-width: 160px;
+    font-size: 18px;
+    line-height: 1.14;
+  }
 
   @media screen and (min-width: 768px) {
     max-width: 162px;
@@ -48,40 +56,57 @@
 }
 
 .hero-title_accent {
-  font-size: 48px;
+  display: block;
   line-height: 0.96;
   letter-spacing: 0;
   color: var(--focus-pinc-color);
+
+  @media screen and (max-width: 319px) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 320px) {
+    font-size: 48px;
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 34px;
     line-height: 0.91;
     letter-spacing: 0.04em;
+    margin-top: -1px;
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 58px;
+    display: block;
+    margin-top: -4px;
   }
 }
 
+.hero-buttons {
+  display: flex;
+}
+
 .hero-btn {
-  display: inline-block;
-  padding: 7px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
   font-size: 8px;
   line-height: 1.25;
   text-align: center;
   border-radius: 20px;
-
   text-decoration: none;
 
   @media screen and (min-width: 1280px) {
+    height: 40px;
     font-size: 14px;
     line-height: 1.28;
-    padding: 11px 23px;
   }
 }
 
 .hero-btn_first {
+  width: 62px;
   margin-right: 8px;
   color: var(--focus-white-color);
   background-color: var(--focus-pinc-color);
@@ -93,11 +118,13 @@
   }
 
   @media screen and (min-width: 1280px) {
+    width: 107px;
     margin-right: 12px;
   }
 }
 
 .hero-btn_second {
+  width: 83px;
   color: var(--focus-pinc-color);
   background-color: var(--focus-white-color);
   transition: background-color var(--main-transition);
@@ -105,6 +132,10 @@
   &:hover,
   &:focus {
     background-color: var(--white-btn-hover);
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 138px;
   }
 }
 
@@ -255,6 +286,10 @@
   right: 32px;
   z-index: 2;
 
+  @media screen and (min-width: 450px) {
+    right: 80px;
+  }
+
   @media screen and (min-width: 768px) {
     right: 303px;
   }
@@ -274,6 +309,10 @@
   background-color: var(--accent-salmon-color);
   z-index: 1;
 
+  @media screen and (min-width: 450px) {
+    right: 0;
+  }
+
   @media screen and (min-width: 768px) {
     bottom: 40px;
     right: 185px;
@@ -282,7 +321,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    bottom: 76px;
+    bottom: 77px;
     right: 229px;
     width: 534px;
     height: 534px;
@@ -296,11 +335,11 @@
 
   @media screen and (min-width: 768px) {
     position: absolute;
-    top: 124px;
+    bottom: 16px;
   }
 
   @media screen and (min-width: 1280px) {
-    top: 241px;
+    bottom: 60px;
     left: 15px;
   }
 }

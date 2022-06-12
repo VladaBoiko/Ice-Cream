@@ -181,11 +181,11 @@ button {
   margin-left: 12px;
 }
 
-.backdrop {
+.header-backdrop {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 100;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.3);
@@ -206,8 +206,8 @@ button {
   width: 93vw;
   height: 100%;
   max-width: 450px;
-  max-height: 600px;
-  padding: 50px 15px 30px;
+  max-height: 550px;
+  padding: 35px 15px 30px;
   overflow-y: scroll;
   background-color: var(--focus-white-color);
   border-radius: 30px;
@@ -215,14 +215,26 @@ button {
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--main-transition);
 }
-.backdrop.is-hidden .header-modal {
+.header-backdrop.is-hidden .header-modal {
   transform: translate(-50%, -50%) scale(1.3);
+}
+@media screen and (max-width: 319px) {
+  .header-modal {
+    max-height: 450px;
+    padding: 40px 10px;
+    overflow-y: visible;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-modal {
+    max-height: 600px;
+    padding: 50px 20px 30px;
+    overflow-y: visible;
+  }
 }
 @media screen and (min-width: 1280px) {
   .header-modal {
     max-height: 640px;
-    padding: 50px 20px 30px;
-    overflow-y: visible;
   }
 }
 
@@ -258,12 +270,17 @@ button {
 .modal-title {
   font-family: "Titan One", sans-serif;
   margin-bottom: 12px;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.12;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--pink-btn-hover);
   text-align: center;
+}
+@media screen and (max-width: 319px) {
+  .modal-title {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 768px) {
   .modal-title {
@@ -279,6 +296,11 @@ button {
 .form-field {
   margin-bottom: 15px;
 }
+@media screen and (max-width: 319px) {
+  .form-field {
+    margin-bottom: 7px;
+  }
+}
 
 .form-label {
   display: block;
@@ -288,6 +310,11 @@ button {
   font-size: 12px;
   line-height: 1.3;
   letter-spacing: 0.04em;
+}
+@media screen and (max-width: 319px) {
+  .form-label {
+    font-size: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .form-label {
@@ -302,8 +329,8 @@ button {
 
 .form-input {
   width: 100%;
-  height: 45px;
-  padding: 10px;
+  height: 35px;
+  padding: 8px 10px;
   border: 1px solid var(--accent-salmon-color);
   border-radius: 10px;
   background-color: rgba(255, 165, 186, 0.1);
@@ -330,8 +357,26 @@ button {
   font-size: 12px;
   color: rgba(199, 19, 62, 0.5);
 }
+@media screen and (max-width: 319px) {
+  .form-input::-moz-placeholder {
+    font-size: 8px;
+  }
+  .form-input:-ms-input-placeholder {
+    font-size: 8px;
+  }
+  .form-input::placeholder {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 319px) {
+  .form-input {
+    height: 30px;
+    font-size: 12px;
+  }
+}
 @media screen and (min-width: 768px) {
   .form-input {
+    height: 45px;
     font-size: 16px;
   }
 }
@@ -370,10 +415,29 @@ button {
   font-size: 12px;
   color: rgba(199, 19, 62, 0.5);
 }
+@media screen and (max-width: 319px) {
+  .form-comment::-moz-placeholder {
+    font-size: 8px;
+  }
+  .form-comment:-ms-input-placeholder {
+    font-size: 8px;
+  }
+  .form-comment::placeholder {
+    font-size: 8px;
+  }
+}
 .form-comment:hover, .form-comment:focus {
   cursor: pointer;
   border: 0.5px solid var(--pink-btn-hover);
   outline: none;
+}
+@media screen and (max-width: 319px) {
+  .form-comment {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 60px;
+    font-size: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .form-comment {
@@ -400,6 +464,12 @@ button {
   border-radius: 20px;
   transition: background-color var(--main-transition), box-shadow var(--main-transition);
 }
+@media screen and (max-width: 319px) {
+  .form-btn {
+    padding: 8px 40px;
+    font-size: 10px;
+  }
+}
 @media screen and (min-width: 768px) {
   .form-btn {
     font-size: 14px;
@@ -416,6 +486,11 @@ button {
   margin-top: 15px;
   margin-bottom: 30px;
   padding: 0;
+}
+@media screen and (max-width: 319px) {
+  .checkbox {
+    margin-bottom: 20px;
+  }
 }
 
 .checkbox-label {
@@ -472,6 +547,11 @@ button {
 .checkbox-text:hover, .checkbox-text:focus {
   cursor: pointer;
 }
+@media screen and (max-width: 319px) {
+  .checkbox-text {
+    font-size: 10px;
+  }
+}
 @media screen and (min-width: 1280px) {
   .checkbox-text {
     font-size: 14px;
@@ -480,19 +560,22 @@ button {
 
 .hero {
   background-color: var(--bcg-pink-color);
+}
+
+.hero .container {
   position: relative;
   padding-top: 194px;
   padding-bottom: 158px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
-  .hero {
+  .hero .container {
     padding-top: 102px;
     padding-bottom: 190px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero {
+  .hero .container {
     padding-top: 147px;
     padding-bottom: 316px;
   }
@@ -509,10 +592,17 @@ button {
   font-family: "Titan One", sans-serif;
   font-weight: 400;
   font-size: 26px;
-  line-height: 1.15;
+  line-height: 1.14;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--focus-white-color);
+}
+@media screen and (max-width: 320px) {
+  .hero-title {
+    max-width: 160px;
+    font-size: 18px;
+    line-height: 1.14;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero-title {
@@ -531,27 +621,46 @@ button {
 }
 
 .hero-title_accent {
-  font-size: 48px;
+  display: block;
   line-height: 0.96;
   letter-spacing: 0;
   color: var(--focus-pinc-color);
+}
+@media screen and (max-width: 319px) {
+  .hero-title_accent {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .hero-title_accent {
+    font-size: 48px;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero-title_accent {
     font-size: 34px;
     line-height: 0.91;
     letter-spacing: 0.04em;
+    margin-top: -1px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero-title_accent {
     font-size: 58px;
+    display: block;
+    margin-top: -4px;
   }
 }
 
+.hero-buttons {
+  display: flex;
+}
+
 .hero-btn {
-  display: inline-block;
-  padding: 7px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
   font-size: 8px;
   line-height: 1.25;
   text-align: center;
@@ -560,13 +669,14 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .hero-btn {
+    height: 40px;
     font-size: 14px;
     line-height: 1.28;
-    padding: 11px 23px;
   }
 }
 
 .hero-btn_first {
+  width: 62px;
   margin-right: 8px;
   color: var(--focus-white-color);
   background-color: var(--focus-pinc-color);
@@ -577,17 +687,24 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .hero-btn_first {
+    width: 107px;
     margin-right: 12px;
   }
 }
 
 .hero-btn_second {
+  width: 83px;
   color: var(--focus-pinc-color);
   background-color: var(--focus-white-color);
   transition: background-color var(--main-transition);
 }
 .hero-btn_second:hover, .hero-btn_second:focus {
   background-color: var(--white-btn-hover);
+}
+@media screen and (min-width: 1280px) {
+  .hero-btn_second {
+    width: 138px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -742,6 +859,11 @@ button {
   right: 32px;
   z-index: 2;
 }
+@media screen and (min-width: 450px) {
+  .hero-image {
+    right: 80px;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero-image {
     right: 303px;
@@ -763,6 +885,11 @@ button {
   background-color: var(--accent-salmon-color);
   z-index: 1;
 }
+@media screen and (min-width: 450px) {
+  .hero-bg-ellipse {
+    right: 0;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero-bg-ellipse {
     bottom: 40px;
@@ -773,7 +900,7 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .hero-bg-ellipse {
-    bottom: 76px;
+    bottom: 77px;
     right: 229px;
     width: 534px;
     height: 534px;
@@ -788,12 +915,12 @@ button {
 @media screen and (min-width: 768px) {
   .hero-image_milk {
     position: absolute;
-    top: 124px;
+    bottom: 16px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero-image_milk {
-    top: 241px;
+    bottom: 60px;
     left: 15px;
   }
 }
@@ -2053,8 +2180,58 @@ button {
   display: none;
 }
 
-.noscroll {
-  overflow: hidden;
+.button {
+  font-family: inherit;
+  width: 161px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: var(--focus-white-color);
+  transition: background-color var(--main-transition);
+}
+.button__icon {
+  display: inline-block;
+  margin-left: 8px;
+  width: 8px;
+  height: 10px;
+  fill: currentColor;
+}
+.button--red {
+  background-color: var(--focus-pinc-color);
+  color: var(--focus-white-color);
+}
+@media screen and (min-width: 768px) {
+  .button--red {
+    width: 192px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button--red {
+    width: 198px;
+  }
+}
+.button--red:hover, .button--red:focus {
+  background-color: var(--pink-btn-hover);
+}
+.button--white {
+  background-color: var(--focus-white-color);
+  color: var(--focus-pinc-color);
+}
+@media screen and (min-width: 768px) {
+  .button--white {
+    width: 174px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button--white {
+    width: 180px;
+  }
+}
+.button--white:hover, .button--white:focus {
+  background-color: var(--white-btn-hover);
 }
 
 .close-button {
@@ -2091,35 +2268,16 @@ button {
 .contacts {
   position: relative;
   padding-bottom: 48px;
-  min-width: 320px;
+  min-width: 200px;
   background-image: linear-gradient(to bottom, var(--focus-white-color) 22.4%, #fff5f6 22.4%, #fff5f6 100%);
 }
 @media screen and (min-width: 768px) {
   .contacts {
     padding-bottom: 40px;
+    background-image: linear-gradient(to bottom, var(--focus-white-color) 19.3%, #fff5f6 19.3%, #fff5f6 100%);
   }
 }
 @media screen and (min-width: 1280px) {
-  .contacts {
-    padding-bottom: 120px;
-    background-image: linear-gradient(to bottom, var(--focus-white-color) 13.5%, #fff5f6 13.5%, #fff5f6 100%);
-  }
-  .contacts::before {
-    content: "";
-    position: absolute;
-    top: 141px;
-    left: 0;
-    height: 382px;
-    width: 100%;
-    background-image: url(../images/contacts/schedule-fon-1920.png-min.png);
-  }
-}
-@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
-  .contacts::before {
-    background-image: url(../images/contacts/schedule-fon-3480-min.png);
-  }
-}
-@media screen and (min-width: 768px) {
   .contacts {
     padding-bottom: 120px;
     background-image: url(../images/contacts/schedule-fon-1920.png-min.png), linear-gradient(to bottom, var(--focus-white-color) 13.5%, #fff5f6 13.5%, #fff5f6 100%);
@@ -2128,13 +2286,18 @@ button {
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .contacts {
     background-image: url(../images/contacts/schedule-fon-1920.png-min.png), linear-gradient(to bottom, var(--focus-white-color) 13.5%, #fff5f6 13.5%, #fff5f6 100%);
   }
 }
 .contacts__container {
   padding: 0 15px;
+}
+@media screen and (max-width: 320px) {
+  .contacts__container {
+    min-width: 200px;
+  }
 }
 .contacts__body {
   margin-bottom: 32px;
@@ -2165,7 +2328,7 @@ button {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .list-contacts {
     display: flex;
     flex-wrap: wrap;
@@ -2178,17 +2341,12 @@ button {
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 }
-@media screen and (min-width: 480px) {
-  .list-contacts__item {
-    flex-basis: calc((100% - 32px) / 2);
-  }
-}
 @media screen and (min-width: 768px) {
   .list-contacts__item {
     flex-basis: calc((100% - 64px) / 3);
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .list-contacts__item:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -2209,7 +2367,6 @@ button {
   text-transform: uppercase;
   color: var(--focus-white-color);
   margin-bottom: 20px;
-  color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .list-contacts__category {
@@ -2331,69 +2488,13 @@ button {
   }
 }
 
-.button {
-  font-family: inherit;
-  width: 161px;
-  height: 44px;
-  border-radius: 22px;
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  color: var(--focus-white-color);
-  transition: box-shadow var(--main-transition), background-color var(--main-transition);
-}
-.button:hover, .button:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.button__icon {
-  display: inline-block;
-  margin-left: 8px;
-  width: 8px;
-  height: 10px;
-  fill: currentColor;
-}
-.button--red {
-  background-color: var(--focus-pinc-color);
-  color: var(--focus-white-color);
-}
-@media screen and (min-width: 768px) {
-  .button--red {
-    width: 192px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .button--red {
-    width: 198px;
-  }
-}
-.button--red:hover, .button--red:focus {
-  background-color: var(--pink-btn-hover);
-}
-.button--white {
-  background-color: var(--focus-white-color);
-  color: var(--focus-pinc-color);
-}
-@media screen and (min-width: 768px) {
-  .button--white {
-    width: 174px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .button--white {
-    width: 180px;
-  }
-}
-.button--white:hover, .button--white:focus {
-  background-color: var(--white-btn-hover);
-}
-
 .backdrop {
   position: fixed;
   z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
+  min-width: 200px;
   height: 100%;
   padding: 15px;
   background: rgba(0, 0, 0, 0.2);
@@ -2420,6 +2521,11 @@ button {
   height: 80%;
   width: 80%;
   flex-direction: column;
+}
+@media screen and (max-width: 320px) {
+  .modal-location {
+    padding: 30px 10px 10px 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .modal-location {
@@ -2454,7 +2560,6 @@ button {
 }
 
 .address-location {
-  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -2462,17 +2567,33 @@ button {
   letter-spacing: 0.04em;
   color: var(--focus-white-color);
 }
+@media screen and (max-width: 320px) {
+  .address-location {
+    line-height: 1.15;
+  }
+}
 .address-location__item:not(:last-child) {
   margin-bottom: 15px;
+}
+@media screen and (min-width: 200px) and (max-width: 320px) {
+  .address-location__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .modal-franchise {
   position: relative;
   padding: 40px;
+  min-width: 200px;
   width: 100%;
   background-color: #e17992;
   overflow-y: auto;
   border-radius: 30px;
+}
+@media screen and (max-width: 319px) {
+  .modal-franchise {
+    padding: 35px 10px 20px 10px;
+  }
 }
 @media screen and (min-width: 320px) {
   .modal-franchise {
@@ -2694,6 +2815,8 @@ button {
 }
 .footer__link:hover, .footer__link:focus {
   background-color: var(--focus-pinc-color);
+  -webkit-animation: animate125 1000ms infinite 10ms;
+          animation: animate125 1000ms infinite 10ms;
 }
 .footer__icon-first {
   width: 19px;
@@ -2775,5 +2898,29 @@ button {
   .footer__copyright-text {
     line-height: 1.86;
     letter-spacing: 0.02em;
+  }
+}
+
+@-webkit-keyframes animate125 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animate125 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=index.css.map */

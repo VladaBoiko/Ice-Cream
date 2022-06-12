@@ -1019,45 +1019,33 @@ button {
     display: block;
   }
 }
-@media screen and (min-width: 768px) {
-  .advantages__list {
-    margin-right: -16px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .advantages__list {
-    margin-right: -32px;
-  }
-}
-
 .advantages-item {
   display: block;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .advantages-item {
-    width: 280px;
+    width: 230px;
     height: 489px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 768px) {
   .advantages-item {
-    width: 224px;
+    width: 180px;
     height: 473px;
-    flex-basis: calc((100% - 48px) / 3);
   }
   .advantages-item:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 83px;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1280px) {
   .advantages-item {
-    width: 395px;
+    width: 288px;
     height: 535px;
-    flex-basis: calc((100% - 96px) / 3);
   }
   .advantages-item:not(:last-child) {
-    margin-right: 32px;
+    margin-right: 142px;
     flex-wrap: wrap;
   }
 }

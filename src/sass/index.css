@@ -2874,4 +2874,32 @@ button {
   100% {
     transform: scale(1);
   }
+}
+.back-top {
+  position: fixed;
+  bottom: 30px;
+  padding: 0px;
+  right: 30px;
+  display: none;
+  z-index: 99991;
+}
+
+.back-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: var(--pink-btn-hover);
+  opacity: 0.3;
+  transition: all 0.2s linear;
+}
+
+.back-top a:hover {
+  opacity: 1;
+}
+
+.back-top-btn {
+  fill: var(--focus-white-color);
 }/*# sourceMappingURL=index.css.map */

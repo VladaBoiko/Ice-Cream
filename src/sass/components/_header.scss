@@ -1,43 +1,33 @@
 .header {
     background-color: #ffb8ca;
+    position: relative;
+
+    // background-color: transparent;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
 }
 
 .header-container {
-
-    @media screen and (max-width: 479px) {
-        position: relative;
-        padding-top: 8px;
-    }
-
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-        position: relative;
-        padding-top: 8px;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        position: relative;
-        padding-top: 32px;
-    }
-
     display: flex;
     align-items: center;
-    padding-top: 37px;
+
 }
 
 .site-nav {
     display: flex;
+
 }
 
 .logo {
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        position: relative;
-    }
+    padding-top: 37px;
 }
 
 .header-nav {
     display: flex;
     align-items: center;
     margin-left: 175px;
+    padding-top: 37px;
 }
 
 .header-nav {
@@ -54,11 +44,7 @@
     }
 
     &__item {
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.31;
-        color: var(--focus-white-color);
+
     }
 
     &__item:not(:last-child) {
@@ -66,6 +52,7 @@
     }
 
     &__link {
+        position: relative;
         text-decoration: none;
         font-weight: 700;
         font-size: 16px;
@@ -73,6 +60,7 @@
         color: var(--focus-white-color);
         transition: var(--main-transition);
         z-index: 100;
+        padding: 15px 0;
     }
 
     &__link:hover,
@@ -91,20 +79,22 @@
         display: none;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        margin-left: 32px;
-        position: absolute;
-        top: 32px;
-        right: 32px;
-    }
+    
 
     display: flex;
-    padding-left: 37px;
+
+    
     align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 15px;
+    margin-top: 40px;
+    margin-left: auto;
 
     width: 159px;
     height: 44px;
-    margin-left: 174px;
     border-radius: 22px;
     background: var(--focus-white-color);
     border: 0;
@@ -130,24 +120,24 @@
 
     @media screen and (max-width: 479px) {
         position: absolute;
-        margin-left: 61px;
         top: 27px;
         right: 20px;
     }
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
         position: absolute;
-        margin-left: 61px;
         top: 27px;
         right: 20px;
     }
 
-    @media screen and (min-width: 1280px) {
-        display: none;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        position: relative;
+        right: 224px;
+        top: 27px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        margin-left: 293px;
+    @media screen and (min-width: 1280px) {
+        display: none;
     }
 }
 

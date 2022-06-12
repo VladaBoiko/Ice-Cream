@@ -114,8 +114,10 @@ button {
 }
 
 .header {
-  background-color: #ffb8ca;
-  position: relative;
+  background-color: transparent;
+  position: absolute;
+  z-index: 200;
+  width: 100%;
 }
 
 .header-container {
@@ -127,8 +129,27 @@ button {
   display: flex;
 }
 
-.logo {
-  padding-top: 37px;
+@media screen and (max-width: 479px) {
+  .logo {
+    position: absolute;
+    margin-top: 8px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .logo {
+    position: absolute;
+    margin-top: 8px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .logo {
+    margin-top: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    padding-top: 37px;
+  }
 }
 
 .header-nav {
@@ -202,6 +223,11 @@ button {
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header-button {
+    margin-top: 32px;
+  }
+}
 .header-button:hover, .header-button:focus {
   background: #ECEBEB;
 }
@@ -226,9 +252,10 @@ button {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .header-menu-btn {
-    position: relative;
+    position: absolute;
+    top: 0;
+    margin-top: 46px;
     right: 224px;
-    top: 27px;
   }
 }
 @media screen and (min-width: 1280px) {

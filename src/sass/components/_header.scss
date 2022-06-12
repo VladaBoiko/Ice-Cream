@@ -1,17 +1,16 @@
 .header {
-    background-color: #ffb8ca;
-    position: relative;
+    // background-color: #ffb8ca;
+    // position: relative;
 
-    // background-color: transparent;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
+    background-color: transparent;
+    position: absolute;
+    z-index: 200;
+    width: 100%;
 }
 
 .header-container {
     display: flex;
     align-items: center;
-
 }
 
 .site-nav {
@@ -20,7 +19,30 @@
 }
 
 .logo {
-    padding-top: 37px;
+    @media screen and (max-width: 479px) {
+        position: absolute;
+        margin-top: 8px;
+        
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        position: absolute;
+        margin-top: 8px;
+               
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        margin-top: 32px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 37px;
+        
+    }
+
+    
+
+    
 }
 
 .header-nav {
@@ -41,10 +63,6 @@
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         display: none;
-    }
-
-    &__item {
-
     }
 
     &__item:not(:last-child) {
@@ -79,7 +97,10 @@
         display: none;
     }
 
-    
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        margin-top: 32px;
+    }
+
 
     display: flex;
 
@@ -131,16 +152,13 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-        position: relative;
+        position: absolute;
+        top: 0;
+        margin-top: 46px;
         right: 224px;
-        top: 27px;
     }
 
     @media screen and (min-width: 1280px) {
         display: none;
     }
 }
-
-
-
-

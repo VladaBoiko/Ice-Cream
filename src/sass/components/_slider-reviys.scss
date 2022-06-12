@@ -1,4 +1,4 @@
-.slider {
+.slider-box {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     height: 650px;
     margin-top: 80px;
@@ -15,7 +15,7 @@
   }
 }
 
-.slider3 {
+.slider {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     top: 52px;
   }
@@ -200,21 +200,20 @@
   }
 }
 
-/* Слайдер с точками */
 .slick-slider.slick-dotted {
   margin-top: 0;
 }
 
-.slider3 .slick-dots {
+.slider .slick-dots {
   bottom: inherit;
 }
 
-.slider3 .slick-dots li {
+.slider .slick-dots li {
   width: 18px;
   height: 18px;
 }
 
-.slider3 .slick-dots li button {
+.slider .slick-dots li button {
   width: 12px;
   height: 12px;
   background-color: #d9d9d9;
@@ -222,7 +221,7 @@
   padding: 0;
 }
 
-.slider3 .slick-dots li button {
+.slider .slick-dots li button {
   width: 12px;
   height: 12px;
   background-color: #d9d9d9;
@@ -230,7 +229,7 @@
   padding: 0;
 }
 
-.slider3 .slick-dots .slick-active button {
+.slider .slick-dots .slick-active button {
   width: 12px;
   height: 12px;
   padding: 0;
@@ -242,14 +241,14 @@
   background-color: none;
 }
 
-.slider3 .slick-active button::before {
+.slider .slick-active button::before {
   display: none;
 }
 
-.slider3 .slick-dots {
+.slider .slick-dots {
   margin-top: 10px;
 }
 
-.slider3 .slick-dots li button::before {
+.slider .slick-dots li button::before {
   display: none;
 }

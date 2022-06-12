@@ -1,15 +1,15 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-open-modal-locations]'),
-    closeModalBtn: document.querySelector('[data-modal-close-locations]'),
-    modal: document.querySelector('[data-modal-locations]'),
+        openHeaderModalBtn: document.querySelector('.js-header-modal-open'),
+    closeHeaderModalBtn: document.querySelector('.js-header-modal-close'),
+    modalHeader: document.querySelector('.js-header-modal'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+    refs.openHeaderModalBtn.addEventListener('click', toggleHeaderModal);
+    refs.closeHeaderModalBtn.addEventListener('click', toggleHeaderModal);
 
-  function toggleModal() {
-    document.body.classList.toggle('noscroll');
-    refs.modal.classList.toggle('backdrop-location--is-hidden');
+  function toggleHeaderModal() {
+    refs.modalHeader.classList.toggle('is-hidden');
+    refs.body.classList.toggle('noscroll');
   }
 })();

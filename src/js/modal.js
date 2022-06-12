@@ -1,8 +1,8 @@
 (() => {
   const refs = {
-    openHeaderModalBtn: document.querySelector('.js-header-modal-open'),
-    closeHeaderModalBtn: document.querySelector('.js-header-modal-close'),
-    modalHeader: document.querySelector('.js-header-modal'),
+    // openHeaderModalBtn: document.querySelector('.js-header-modal-open'),
+    // closeHeaderModalBtn: document.querySelector('.js-header-modal-close'),
+    // modalHeader: document.querySelector('.js-header-modal'),
 
     openCowModalBtn: document.querySelector('.js-cow-modal-open'),
     closeCowModalBtn: document.querySelector('.js-cow-modal-close'),
@@ -18,10 +18,10 @@
 
     body: document.querySelector('body'),
   };
-  if (refs.openHeaderModalBtn && refs.closeHeaderModalBtn) {
-    refs.openHeaderModalBtn.addEventListener('click', toggleHeaderModal);
-    refs.closeHeaderModalBtn.addEventListener('click', toggleHeaderModal);
-  }
+  // if (refs.openHeaderModalBtn && refs.closeHeaderModalBtn) {
+  //   refs.openHeaderModalBtn.addEventListener('click', toggleHeaderModal);
+  //   refs.closeHeaderModalBtn.addEventListener('click', toggleHeaderModal);
+  // }
   if (refs.openCowModalBtn && refs.closeCowModalBtn) {
     refs.openCowModalBtn.addEventListener('click', toggleCowModal);
     refs.closeCowModalBtn.addEventListener('click', toggleCowModal);
@@ -36,10 +36,10 @@
     refs.closeFranchiseModalBtn.addEventListener('click', toggleFranchiseModal);
   }
 
-  function toggleHeaderModal() {
-    refs.modalHeader.classList.toggle('is-hidden');
-    refs.body.classList.toggle('noscroll');
-  }
+  // function toggleHeaderModal() {
+  //   refs.modalHeader.classList.toggle('is-hidden');
+  //   refs.body.classList.toggle('noscroll');
+  // }
   function toggleCowModal() {
     refs.modalCow.classList.toggle('is-hidden');
     refs.body.classList.toggle('noscroll');

@@ -206,6 +206,56 @@
   }
 }
 
+.hero-tooltip .tooltip-text {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 110px;
+  width: 110px;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 50px;
+  font-family: 'Titan One', sans-serif;
+  color: var(--pink-btn-hover);
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-shadow: 0px 3px 1px rgba(255, 255, 255, 0.4),
+    0px 1px 2px rgba(255, 255, 255, 0.08),
+    0px 2px 2px rgba(255, 255, 255, 0.235);
+  background-image: url('../images/hero/icecream@1x.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: transform var(--main-transition);
+  transform: translatey(100%);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero/icecream@2x.png);
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 45px;
+    left: 130px;
+    height: 200px;
+    width: 200px;
+    font-size: 16px;
+  }
+}
+
+.hero-tooltip:hover .tooltip-text,
+.hero-tooltip:focus .tooltip-text {
+  transform: translatey(0);
+}
+
 .hero-list {
   @media screen and (max-width: 767px) {
     display: none;

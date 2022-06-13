@@ -247,10 +247,12 @@
         font-family: Titan One;
         font-size: 20px;
         line-height: 1.15;
-        list-style: none;
     }
     &__item {
         margin-left: 50px;
+    }
+    &__item:first-child {
+    list-style: none;
     }
     &__text {
         color: var(--text-black-color);

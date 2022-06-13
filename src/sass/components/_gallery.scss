@@ -1,17 +1,35 @@
 .gallery{
     display: flex;
     justify-content: center;
+    @media screen and (max-width:319px){
+        flex-direction: column;
+        align-items: center;
+    }
     &-main{
     background-image: linear-gradient(to top, var(--focus-white-color) 55%, #fff5f6 45%);
     }
    &__content{
        display: flex;
-       flex-direction: column;
-       justify-content: center;
+
+       @media screen and (min-width:320px) {
+        flex-direction: column;
+        justify-content: center;
+       }
       
+       &-three{
+           @media screen  and (max-width:319px){
+               margin-left: 35px;
+           }
+       }
        
        &-four{
-        margin-top: 15px;
+        @media screen  and (max-width:319px){
+            margin-right: 30px;
+        }
+           @media screen and (min-width:320px){
+            margin-top: 15px;
+           }
+        
         @media screen and (min-width:768px){
             margin-top: 25px;
          }
@@ -20,7 +38,14 @@
         }
        }
        &-five{
+
+        @media screen  and (max-width:319px){
+            margin-left: 30px;
+        }
+        @media screen and (min-width:320px){
+                
            margin-bottom: 15px;
+           }
            @media screen and (min-width:768px){
             margin-bottom: 25px;
          }
@@ -30,12 +55,19 @@
         }
        }
        &-six{
+        @media screen  and (max-width:319px){
+            margin-left: 10px;
+        }
+        @media screen and (min-width:320px){
            margin-top: 5px;
        }
+    }
        
    }
    &__content:not(:last-child){
+    @media screen and (min-width:320px){
        margin-right: 3px;
+    }
        @media screen and (min-width:1280px) {
            margin-right: 5px;
        }
@@ -43,10 +75,16 @@
 
     &__img{
         border-radius: 4px;
+        @media screen and (max-width:319px){
+            width: 55px;
+            height: 55px;
+        }
         width: 35px;
         height: 35px;
         
-        
+        @media screen and (max-width:319px){
+            margin: 3px;
+        }
         transition: overflow 250ms cubic-bezier(0.4, 0, 0.2, 1),
                     border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
                     transform 1250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -61,10 +99,7 @@
             border: 7px double var(--accent-salmon-color);
             z-index: 3;
         }
-        @media screen and (min-width:480px) {
-            width: 60px;
-            height: 60px;
-        }
+      
         @media screen and (min-width:768px) {
             width: 78px;
             height: 78px;
@@ -74,18 +109,31 @@
             height: 140px;
         }
         &-top{
+            @media screen and (min-width:320px){
             margin-top: 3px;
+            }
             @media screen and (min-width:1280px) {
                 margin-top: 5px;
             }
         }
         &-big{
-            width: 70px;
-            height: 70px;
-            @media screen and (min-width:480px) {
-                width: 120px;
-                height: 120px;
+            @media screen and (max-width:319px){
+                width: 75px;
+                height: 75px;
             }
+            @media screen and (min-width:320px){
+                width: 70px;
+            height: 70px;
+            }
+            
+
+            &:hover,
+            &:focus{
+            
+                transform: scale(1.2);
+              
+            }
+         
             @media screen and (min-width:768px) {
                 width: 156px;
                 height: 156px;

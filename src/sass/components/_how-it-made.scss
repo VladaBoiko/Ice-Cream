@@ -132,6 +132,9 @@
 }
 
 .about-btn {
+    display: none;
+    @media screen and (min-width: 300px) {
+    display: block;
     width: 176px;
     height: 44px;
     font-weight: 700;
@@ -144,13 +147,14 @@
     transition: 
     color var( --main-transition), 
     background-color var( --main-transition);
-    &:hover, &:focus{
-        background-color: var(--white-btn-hover);
-    }
-    @media screen and (min-width: 768px) {
-        font-size: 16px;
-        line-height: 1.31;
-    }
+        &:hover, &:focus{
+            background-color: var(--white-btn-hover);
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+            line-height: 1.31;
+        }
+    }   
 }
 
 .icon-arrow {
@@ -159,6 +163,14 @@
     fill: currentColor;
 }
 
+.backdrop.js-cow-modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity var(--main-transition), visibility var(--main-transition);
+}
 
 .about-modal {
     width: 90vw;
@@ -168,7 +180,7 @@
     background-color: #e17992;
     border-radius: 30px;
     transform: translate(-50%, -50%) scale(1) rotate(0);
-    transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var( --main-transition);
     padding: 40px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -178,9 +190,8 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url(../images/how-its-made/cow-fon-mobail-640.png);
-   
-
     }
+   
     .backdrop.is-hidden & {
         transform: scale(0.5) rotate(40deg);
     }
@@ -218,7 +229,6 @@
         padding: 10px;
         
     }
-    
     &__icon {
         transition:transform var( --main-transition);
         &:hover {
@@ -249,15 +259,6 @@
         line-height: 1.76;
         width: 70%;
     }
-}
-
-.backdrop {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity var(--main-transition), visibility var(--main-transition);
 }
 
 .is-hidden {

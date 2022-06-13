@@ -239,7 +239,7 @@
 
 .modal-list {
     list-style: disc;
-    &__title {
+    & .modal-list__title {
         letter-spacing: .04em;
         text-transform: uppercase;
         color: var(--focus-pinc-color);
@@ -247,7 +247,7 @@
         font-family: Titan One;
         font-size: 20px;
         line-height: 1.15;
-        margin-left: 50px;
+        list-style: none;
     }
     &__item {
         margin-left: 50px;

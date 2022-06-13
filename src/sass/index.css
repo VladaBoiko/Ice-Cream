@@ -1567,7 +1567,6 @@ button {
     background-image: url(../images/how-its-made/cow-fon-mobail-320.png);
     margin-left: auto;
     margin-right: auto;
-    max-width: 320px;
     background-position: 0 520px;
   }
 }
@@ -1580,7 +1579,7 @@ button {
   .about-background {
     background-image: url(../images/how-its-made/cow-fon-desctop-1280.png);
     background-position: 0 215px;
-    max-width: 1278px;
+    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
   }

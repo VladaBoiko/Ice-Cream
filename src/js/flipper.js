@@ -1,10 +1,10 @@
 // const list = document.querySelector('.products__list');
-const list = document.querySelectorAll('.products-info-btn');
+const flipButons = document.querySelectorAll('.products-info-btn');
 let cards = null;
 let card = null;
 
-for (let i = 0; i < list.length; i += 1) {
-  list[i].addEventListener('click', event => {
+for (let i = 0; i < flipButons.length; i += 1) {
+  flipButons[i].addEventListener('click', event => {
     const clickFlip = event.target.closest('.card');
     if (!clickFlip) {
       flipEnd();
@@ -17,9 +17,9 @@ for (let i = 0; i < list.length; i += 1) {
       return;
     }
 
-    const activElement = document.querySelector('.js-flip');
+    const activeElement = document.querySelector('.js-flip');
 
-    if (activElement) {
+    if (activeElement) {
       flipEnd();
       classRemove();
     }

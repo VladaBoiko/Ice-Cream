@@ -1,15 +1,13 @@
 (() => {
   const refs = {
-    // openHeaderModalMobileBtn: document.querySelector('.js-header-modal-open-mobile'),
-    openHeaderModalBtn: document.querySelector('.js-header-modal-open'),
+    openHeaderModalMobileBtn: document.querySelector('.js-header-modal-open-mobile'),
     
     closeHeaderModalBtn: document.querySelector('.js-header-modal-close'),
     modalHeader: document.querySelector('.js-header-modal'),
     body: document.querySelector('body'),
   };
 
-  refs.openHeaderModalBtn.addEventListener('click', toggleHeaderModal);
-  // refs.openHeaderModalMobileBtn.addEventListener('click', toggleHeaderModal);
+  refs.openHeaderModalMobileBtn.addEventListener('click', toggleHeaderModal);
   refs.closeHeaderModalBtn.addEventListener('click', toggleHeaderModal);
 
   function toggleHeaderModal() {

@@ -4,6 +4,14 @@
     z-index: 2;
     width: 100%;
     padding-top: 37px;
+    @media screen and (min-width: 1280px) {
+        padding-top: 37px;
+        
+    }
+    @media screen and (min-width: 1280px) {
+        padding-top: 32px;
+        
+    }
 }
 
 .header-container {
@@ -18,32 +26,32 @@ justify-content: center;
 align-items: center;
 }
 
-.logo {
-    // @media screen and (max-width: 479px) {
-    //     // position: absolute;
-    //     padding-top: 8px;
+// .logo {
+//     // @media screen and (max-width: 479px) {
+//     //     // position: absolute;
+//     //     padding-top: 8px;
         
-    // }
+//     // }
 
-    // @media screen and (min-width: 480px) and (max-width: 767px) {
-    //     position: absolute;
-    //     margin-top: 8px;
+//     // @media screen and (min-width: 480px) and (max-width: 767px) {
+//     //     position: absolute;
+//     //     margin-top: 8px;
                
-    // }
+//     // }
 
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        padding-top: 32px;
-    }
+//     @media screen and (min-width: 768px) and (max-width: 1279px) {
+//         padding-top: 32px;
+//     }
 
-    @media screen and (min-width: 1280px) {
-        padding-top: 37px;
+//     @media screen and (min-width: 1280px) {
+//         padding-top: 37px;
         
-    }
+//     }
 
     
 
     
-}
+// }
 
 // .header-nav {
 //     display: flex;
@@ -91,9 +99,9 @@ align-items: center;
         display: none;
     }
 
-    // @media screen and (min-width: 768px) and (max-width: 1279px) {
-    //     margin-top: 32px;
-    // }
+    @media screen and (min-width: 1280px) {
+        margin-left: auto;
+    }
 
 
     display: flex;
@@ -104,7 +112,7 @@ align-items: center;
     // top: 0;
     // right: 15px;
     // margin-top: 40px;
-    margin-left: auto;
+    // margin-left: auto;
 
     width: 159px;
     height: 44px;
@@ -145,12 +153,9 @@ margin-left: auto;
     //     right: 20px;
     // }
 
-    // @media screen and (min-width: 768px) and (max-width: 1279px) {
-    //     position: absolute;
-    //     top: 0;
-    //     margin-top: 46px;
-    //     right: 224px;
-    // }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        margin-right: 32px;
+    }
 
     @media screen and (min-width: 1280px) {
         display: none;

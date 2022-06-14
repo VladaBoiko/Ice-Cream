@@ -261,6 +261,7 @@
     font-size: 14px;
     line-height: 1.52;
     width: 200px;
+    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 768px) {
@@ -283,7 +284,7 @@
   @media screen and (min-width: 1280px) {
     bottom: 60px;
   }
-  // left: 50%;
+  left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
   width: 40px;

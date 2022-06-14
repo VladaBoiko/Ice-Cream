@@ -95,7 +95,7 @@
   position: relative;
   @media screen and (min-width: 200px) and (max-width: 319px) {
     min-width: 180px;
-    height: 430px;
+    // height: 430px;
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
@@ -103,7 +103,7 @@
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
     width: 280px;
-    height: 489px;
+    // height: 489px;
     margin-top: 150px;
     margin-right: auto;
     margin-left: auto;
@@ -111,14 +111,14 @@
 
   @media screen and (min-width: 768px) {
     width: 224px;
-    height: 473px;
+    // height: 473px;
     margin-top: 150px;
   }
 
   @media screen and (min-width: 1280px) {
     margin-top: 250px;
     width: 395px;
-    height: 535px;
+    // height: 535px;
   }
 }
 .products__item::before {
@@ -277,13 +277,13 @@
 }
 
 .products-info-btn {
-  position: absolute;
-  bottom: 40px;
-  @media screen and (min-width: 1280px) {
-    bottom: 60px;
-  }
-  left: 50%;
-  transform: translateX(-50%);
+  // position: absolute;
+  // bottom: 40px;
+  // @media screen and (min-width: 1280px) {
+  // bottom: 60px;
+  // }
+  // left: 50%;
+  // transform: translateX(-50%);
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -311,8 +311,8 @@
   }
   &--rotated {
     transform: rotate(180deg);
-    left: 45%;
-    transform: translateX(-50%);
+    // left: 45%;
+    // transform: translateX(-50%);
   }
 }
 
@@ -322,30 +322,32 @@
 
 .products-item-box {
   position: relative;
+  flex-grow: 1;
   padding: 10px;
   width: 100%;
+  height: 100%;
   border-radius: 24px;
-  height: 430px;
+  // height: 430px;
   padding: 100px 15px 15px 15px;
   @media screen and (min-width: 200px) and (max-width: 319px) {
     max-width: 300px;
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    height: 489px;
+    // height: 489px;
     padding: 160px 40px 40px 40px;
   }
   @media screen and (min-width: 768px) {
-    height: 473px;
+    // height: 473px;
     padding: 118px 32px 40px;
   }
   @media screen and (min-width: 1280px) {
-    height: 535px;
+    // height: 535px;
     padding: 165px 75px 60px;
   }
 }
 
 .card {
-  position: relative;
+  display: flex;
   perspective: 1000px;
 }
 .card__bg--ice {
@@ -360,24 +362,11 @@
 
 .front,
 .back {
-  z-index: 9;
-  position: absolute;
-  width: 100%;
-  height: 100px;
-
   transition: 500ms;
   backface-visibility: hidden;
 }
 
 .back {
+  margin-left: -100%;
   transform: rotateY(180deg);
-  &-box {
-    height: 100%;
-    background-color: #ffb8ca;
-    // padding: 44px;
-    border-radius: 24px;
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-items: flex-end;
-  }
 }

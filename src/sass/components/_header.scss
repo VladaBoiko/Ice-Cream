@@ -3,6 +3,7 @@
     position: absolute;
     z-index: 2;
     width: 100%;
+    padding-top: 37px;
 }
 
 .header-container {
@@ -13,15 +14,16 @@
 
 .site-nav {
     display: flex;
-
+justify-content: center;
+align-items: center;
 }
 
 .logo {
-    @media screen and (max-width: 479px) {
-        // position: absolute;
-        padding-top: 8px;
+    // @media screen and (max-width: 479px) {
+    //     // position: absolute;
+    //     padding-top: 8px;
         
-    }
+    // }
 
     // @media screen and (min-width: 480px) and (max-width: 767px) {
     //     position: absolute;
@@ -56,15 +58,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 479px) {
-        display: none;
-    }
+    margin-left: 175px;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-        display: none;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @media screen and (max-width: 1279px) {
         display: none;
     }
 
@@ -107,7 +103,7 @@
     // position: absolute;
     // top: 0;
     // right: 15px;
-    margin-top: 40px;
+    // margin-top: 40px;
     margin-left: auto;
 
     width: 159px;

@@ -138,13 +138,16 @@
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     top: -150px;
+    max-width: 280px;
   }
   @media screen and (min-width: 768px) {
     top: -150px;
+    max-width: 244px;
   }
 
   @media screen and (min-width: 1280px) {
     top: -250px;
+    max-width: 394px;
   }
 }
 .products__item-ice::before {

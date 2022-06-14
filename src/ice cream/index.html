@@ -40,3 +40,44 @@
     </ul>
   </div>
 </section>
+
+
+.card {
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+}
+.card__bg--ice {
+  background: var(--bcg-pink-color);
+}
+.card__bg--coffee {
+  background: #f0d1a5;
+}
+.card__bg--milkshake {
+  background: #c2e297;
+}
+
+.front,
+.back {
+  // z-index: 9;
+  // position: absolute;
+  width: 100%;
+  // height: 100px;
+display: flex;
+  transition: 500ms;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  margin-left: -100%;
+  &-box {
+    // height: 100%;
+    background-color: #ffb8ca;
+    // padding: 44px;
+    border-radius: 24px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: flex-end;
+  }
+}

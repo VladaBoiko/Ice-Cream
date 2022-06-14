@@ -204,24 +204,20 @@
   @media screen and (min-width: 200px) and (max-width: 319px) {
     font-size: 18px;
     line-height: 1.15;
-    // padding-top: 80px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 20px;
     line-height: 1.15;
-    // padding-top: 160px;
   }
   @media screen and (min-width: 768px) {
     font-size: 20px;
     line-height: 1.15;
-    // padding-top: 118px;
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 30px;
     line-height: 1;
-    // padding-top: 165px;
   }
 }
 
@@ -255,7 +251,7 @@
     font-size: 14px;
     line-height: 1.52;
     width: 150px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -266,6 +262,7 @@
   }
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
     font-size: 14px;
     line-height: 1.76;
     width: 160px;
@@ -330,21 +327,17 @@
   width: 100%;
   height: 100%;
   border-radius: 24px;
-  // height: 430px;
   padding: 100px 15px 15px 15px;
   @media screen and (min-width: 200px) and (max-width: 319px) {
     max-width: 300px;
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    // height: 489px;
     padding: 160px 40px 40px 40px;
   }
   @media screen and (min-width: 768px) {
-    // height: 473px;
     padding: 118px 32px 40px;
   }
   @media screen and (min-width: 1280px) {
-    // height: 535px;
     padding: 165px 75px 60px;
   }
 }
@@ -367,6 +360,9 @@
 .back {
   transition: 500ms;
   backface-visibility: hidden;
+    @media screen and (max-width: 319px) {
+      width: 100%;
+      }
 }
 
 .back {

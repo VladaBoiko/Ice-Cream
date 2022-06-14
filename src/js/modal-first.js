@@ -6,8 +6,8 @@
     body: document.querySelector('body'),
   };
 
-    refs.openHeaderModalBtn.addEventListener('click', toggleHeaderModal);
-    refs.closeHeaderModalBtn.addEventListener('click', toggleHeaderModal);
+  refs.openHeaderModalBtn.addEventListener('click', toggleHeaderModal);
+  refs.closeHeaderModalBtn.addEventListener('click', toggleHeaderModal);
 
   function toggleHeaderModal() {
     refs.modalHeader.classList.toggle('is-hidden');

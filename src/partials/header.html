@@ -7,26 +7,41 @@
         alt="logo"
       />
     </a>
-    <nav class="site-nav">
-      <ul class="header-nav">
-        <li class="header-nav__item">
-          <a href="" class="header-nav__link">Home</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#cream-brulee" class="header-nav__link">About us</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#how-it-made" class="header-nav__link">How it&#39;s made?</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#picture" class="header-nav__link">Our products</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#contacts" class="header-nav__link">Contact</a>
-        </li>
-      </ul>
+    <nav class="site-nav js-menu-container is-open">
+      <div class="site-nav-wrap">
+        <button class="menu-close js-close-menu">
+          <!-- <svg class="menu-close-icon" width="14" height="14">
+            <use href="./images/sprite.svg#close"></use>
+          </svg> -->
+        </button>
+        <button type="button" class="header-button-mobile js-header-modal-open-mobile">
+          Buy now
+          <svg class="header-button__icon" width="8" height="10">
+            <use href="./images/sprite.svg#icon-arrow"></use>
+          </svg>
+        </button>
+        <ul class="header-nav">
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">Home</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#cream-brulee" class="header-nav__link">About us</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#how-it-made" class="header-nav__link"
+              >How it&#39;s made?</a
+            >
+          </li>
+          <li class="header-nav__item">
+            <a href="#picture" class="header-nav__link">Our products</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="#contacts" class="header-nav__link">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <button type="button" class="menu-open-btn">
+    <button type="button" class="menu-open-btn js-open-menu">
       <svg class="menu-open-icon" width="20" height="12">
         <use href="./images/sprite.svg#burger"></use>
       </svg>
@@ -38,39 +53,7 @@
       </svg>
     </button>
 
-    <div class="mobile-menu">
-      <button class="menu-close">
-        <svg class="menu-close-icon" width="14" height="14">
-          <use href="./images/sprite.svg#close"></use>
-        </svg>
-      </button>
-
-      <button type="button" class="header-button-mobile js-header-modal-open">
-        Buy now
-        <svg class="header-button__icon" width="8" height="10">
-          <use href="./images/sprite.svg#icon-arrow"></use>
-        </svg>
-      </button>
-
-      <nav class="mob-site-nav">
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a href="" class="nav-list__link">Home</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#cream-brulee" class="nav-list__link">About us</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#how-it-made" class="nav-list__link">How it&#39;s made?</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#picture" class="nav-list__link">Our products</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#contacts" class="nav-list__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+   
     </div>
   </div>
 </header>

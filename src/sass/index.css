@@ -149,18 +149,11 @@ button {
   }
 }
 
-.site-nav {
-  display: none;
-}
 @media screen and (min-width: 1280px) {
-  .site-nav {
-    display: block;
+  .header-nav {
+    display: flex;
+    align-items: center;
   }
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
 }
 
 .header-nav__link {
@@ -242,50 +235,54 @@ button {
   transition: stroke var(--main-transition);
 }
 
-.mobile-menu {
-  position: fixed;
-  width: 70vw;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  z-index: 500;
+.menu-close {
+  display: block;
 }
-@media screen and (min-width: 768px) {
-  .mobile-menu {
+@media screen and (min-width: 1280px) {
+  .menu-close {
     display: none;
   }
 }
 
-.header-button {
+.header-button-mobile {
+  display: block;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 44px;
+  background-color: var(--focus-white-color);
+  border-radius: 22px;
+  font-weight: 700;
+  line-height: 1.31;
+  color: var(--focus-pinc-color);
   transition: background-color var(--main-transition);
 }
-@media screen and (max-width: 767px) {
-  .header-button {
+@media screen and (min-width: 1280px) {
+  .header-button-mobile {
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
-  .header-button {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 160px;
-    height: 44px;
-    background-color: var(--focus-white-color);
-    border-radius: 22px;
-    font-weight: 700;
-    line-height: 1.31;
-    color: var(--focus-pinc-color);
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .header-button {
-    margin-left: 32px;
-  }
-}
-.header-button:hover, .header-button:focus {
+.header-button-mobile:hover, .header-button-mobile:focus {
   background-color: var(--white-btn-hover);
+}
+
+@media screen and (max-width: 1279px) {
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    background-color: #e17992;
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .header-backdrop {

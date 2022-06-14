@@ -1,0 +1,226 @@
+.header {
+  // background-color: $fon;
+  transition: background-color 250ms linear;
+}
+
+.header-box {
+  padding-top: 6px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  @include text('Titan One', 400, 26px, 30px);
+  color: $accentText;
+}
+
+.logo__photo {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header__menu {
+  position: relative;
+  z-index: 5;
+  margin-left: auto;
+}
+
+.header__dutton-end {
+  position: absolute;
+  z-index: 1001;
+  top: 23px;
+  right: 28px;
+}
+
+.header__button {
+  border-radius: 22px;
+  @include text('DM Sans', 700, 16px, 21px);
+  color: $accentText;
+
+  svg {
+    margin-left: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.header__button-two {
+  width: 100%;
+  height: 44px;
+  margin-bottom: 32px;
+
+  background-color: #fff;
+}
+
+.nav-list {
+  display: grid;
+  gap: 22px;
+}
+
+.nav-list__link {
+  position: relative;
+  z-index: 5;
+  @include text('DM Sans', 700, 14px, 18px);
+  color: #fff;
+
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: $accentText;
+  }
+
+  &--color {
+    color: $accentText;
+  }
+}
+
+.nav-list__link-decoration-r {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  display: block;
+  color: $accentText;
+  transform: translate(25px);
+  opacity: 0;
+
+  transition: transform 250ms linear, opacity 250ms linear;
+  .nav-list__link:hover &,
+  .nav-list__link:focus & {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.nav-list__link-decoration-l {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  display: block;
+  color: $accentText;
+  transform: translate(-25px);
+  opacity: 0;
+
+  transition: transform 250ms linear, opacity 250ms linear;
+  .nav-list__link:hover &,
+  .nav-list__link:focus & {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .header__button-one {
+    display: none;
+  }
+}
+
+@media screen and(max-width: 1080px) {
+  .header {
+    background-color: $fon;
+  }
+  .nav-box {
+    padding: 60px 21px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 250px;
+    height: 100%;
+    background-color: $accent;
+    transform: translate(100%);
+    opacity: 0;
+
+    transition: transform 250ms linear, opacity 250ms linear;
+
+    &--show {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .header-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header__menu {
+    margin-right: 30px;
+  }
+  .header__button {
+    svg {
+      margin-left: 12px;
+    }
+  }
+
+  .header__button-one {
+    width: 160px;
+    height: 44px;
+    background-color: #fff;
+  }
+  .header__button-two {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 186px;
+  }
+
+  .nav-box {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and(min-width: 1081px) {
+  .header__dutton-end {
+    display: none;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__button-two {
+    display: none;
+  }
+
+  .nav {
+    margin: 0 auto;
+    z-index: 1001;
+  }
+
+  .nav-box {
+    padding: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 35px;
+  }
+
+  .nav-list__link {
+    position: relative;
+    z-index: 1001;
+    @include text('DM Sans', 700, 16px, 21px);
+  }
+}

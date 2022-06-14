@@ -159,3 +159,107 @@
         display: none;
     }
 }
+
+.menu-modal.is-hidden {
+    transform: translate(100%);
+}
+
+.menu-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #E17992;
+
+    
+    @media screen and (max-width: 479px) {
+        z-index: 250;
+        width: 100%;
+        height: 100vh;
+        background-color: #e17992;
+        transition-property: transform;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translate(0);
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px){
+        z-index: 200;
+        width: 100%;
+        height: 100vh;
+        background-color: #e17992;
+        transition-property: transform;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translate(0);
+    }
+}
+
+.menu-modal__button {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.buy-now-btn {
+
+    @media screen and (max-width: 479px) {
+        width: 186px;
+        height: 44px;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        width: 209px;
+        height: 44px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    background: var(--focus-white-color);
+    border-radius: 22px;
+    border: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    color: var(--focus-pinc-color);
+    cursor: pointer;
+    transition: var(--main-transition);
+
+    &:hover,
+    &:focus {
+        background: #ECEBEB;
+    }
+}
+
+.modal-nav {
+    &__link {
+        margin-right: 20px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+        color: var(--focus-white-color);
+        transition: var(--main-transition);
+        z-index: 100;
+        padding: 15px 0;
+    }
+
+    &__link:not(:last-child) {
+        margin-bottom: 23px;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--focus-pinc-color);
+    }
+}

@@ -94,7 +94,7 @@
 .products__item {
   position: relative;
   @media screen and (min-width: 200px) and (max-width: 319px) {
-    min-width: 180px;
+    width: 100%;
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;

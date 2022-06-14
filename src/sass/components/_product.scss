@@ -277,13 +277,13 @@
 }
 
 .products-info-btn {
-  // position: absolute;
-  // bottom: 40px;
-  // @media screen and (min-width: 1280px) {
-  // bottom: 60px;
-  // }
-  // left: 50%;
-  // transform: translateX(-50%);
+  position: absolute;
+  bottom: 40px;
+  @media screen and (min-width: 1280px) {
+    bottom: 60px;
+  }
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -310,9 +310,8 @@
     fill: var(--focus-white-color);
   }
   &--rotated {
-    transform: rotate(180deg);
-    // left: 45%;
-    // transform: translateX(-50%);
+    transform: translateX(-50%) rotate(180deg);
+    left: 50%;
   }
 }
 

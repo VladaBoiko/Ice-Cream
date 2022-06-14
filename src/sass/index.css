@@ -89,8 +89,7 @@ picture {
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   margin: -1px;
 }
 
@@ -428,25 +427,11 @@ button {
   border: 1px solid var(--pink-btn-hover);
   outline: none;
 }
-.form-input::-moz-placeholder {
-  font-size: 12px;
-  color: rgba(199, 19, 62, 0.5);
-}
-.form-input:-ms-input-placeholder {
-  font-size: 12px;
-  color: rgba(199, 19, 62, 0.5);
-}
 .form-input::placeholder {
   font-size: 12px;
   color: rgba(199, 19, 62, 0.5);
 }
 @media screen and (max-width: 319px) {
-  .form-input::-moz-placeholder {
-    font-size: 8px;
-  }
-  .form-input:-ms-input-placeholder {
-    font-size: 8px;
-  }
   .form-input::placeholder {
     font-size: 8px;
   }
@@ -486,25 +471,11 @@ button {
   letter-spacing: 0.04em;
   transition: border var(--main-transition);
 }
-.form-comment::-moz-placeholder {
-  font-size: 12px;
-  color: rgba(199, 19, 62, 0.5);
-}
-.form-comment:-ms-input-placeholder {
-  font-size: 12px;
-  color: rgba(199, 19, 62, 0.5);
-}
 .form-comment::placeholder {
   font-size: 12px;
   color: rgba(199, 19, 62, 0.5);
 }
 @media screen and (max-width: 319px) {
-  .form-comment::-moz-placeholder {
-    font-size: 8px;
-  }
-  .form-comment:-ms-input-placeholder {
-    font-size: 8px;
-  }
   .form-comment::placeholder {
     font-size: 8px;
   }
@@ -913,7 +884,7 @@ button {
   transition: transform var(--main-transition);
   transform: translatey(100%);
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero-tooltip .tooltip-text {
     background-image: url(../images/hero/icecream@2x.png);
   }
@@ -1216,7 +1187,6 @@ button {
 @media screen and (min-width: 200px) and (max-width: 319px) {
   .products__item {
     min-width: 180px;
-    height: 430px;
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
@@ -1225,7 +1195,6 @@ button {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item {
     width: 280px;
-    height: 489px;
     margin-top: 150px;
     margin-right: auto;
     margin-left: auto;
@@ -1234,7 +1203,6 @@ button {
 @media screen and (min-width: 768px) {
   .products__item {
     width: 224px;
-    height: 473px;
     margin-top: 150px;
   }
 }
@@ -1242,7 +1210,6 @@ button {
   .products__item {
     margin-top: 250px;
     width: 395px;
-    height: 535px;
   }
 }
 
@@ -1466,9 +1433,8 @@ button {
   fill: var(--focus-white-color);
 }
 .products-info-btn--rotated {
-  transform: rotate(180deg);
-  left: 45%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(180deg);
+  left: 50%;
 }
 
 .products-icon {
@@ -1477,10 +1443,11 @@ button {
 
 .products-item-box {
   position: relative;
+  flex-grow: 1;
   padding: 10px;
   width: 100%;
+  height: 100%;
   border-radius: 24px;
-  height: 430px;
   padding: 100px 15px 15px 15px;
 }
 @media screen and (min-width: 200px) and (max-width: 319px) {
@@ -1490,25 +1457,22 @@ button {
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products-item-box {
-    height: 489px;
     padding: 160px 40px 40px 40px;
   }
 }
 @media screen and (min-width: 768px) {
   .products-item-box {
-    height: 473px;
     padding: 118px 32px 40px;
   }
 }
 @media screen and (min-width: 1280px) {
   .products-item-box {
-    height: 535px;
     padding: 165px 75px 60px;
   }
 }
 
 .card {
-  position: relative;
+  display: flex;
   perspective: 1000px;
 }
 
@@ -1526,22 +1490,13 @@ button {
 
 .front,
 .back {
-  z-index: 9;
-  position: absolute;
-  width: 100%;
-  height: 100px;
   transition: 500ms;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .back {
+  margin-left: -100%;
   transform: rotateY(180deg);
-}
-.back-box {
-  height: 100%;
-  background-color: #ffb8ca;
-  border-radius: 24px;
 }
 
 .about {
@@ -1570,7 +1525,7 @@ button {
     background-position: 0 520px;
   }
 }
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .about-background {
     background-image: url(../images/how-its-made/cow-fon-mobail-640.png);
   }
@@ -1584,7 +1539,7 @@ button {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 950px) and (min-device-pixel-ratio: 2), screen and (min-width: 950px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 950px) and (min-resolution: 192dpi), screen and (min-width: 950px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 950px) and (min-device-pixel-ratio: 2), screen and (min-width: 950px) and (min-resolution: 192dpi), screen and (min-width: 950px) and (min-resolution: 2dppx) {
   .about-background {
     background-image: url(../images/how-its-made/cow-fon-desctop-2560.png);
   }
@@ -1773,7 +1728,7 @@ button {
   background-position: 0 95%;
   background-image: url(../images/how-its-made/cow-fon-mobail-320.png);
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .about-modal {
     background-image: url(../images/how-its-made/cow-fon-mobail-640.png);
   }
@@ -2481,7 +2436,7 @@ button {
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .contacts {
     background-image: url(../images/contacts/schedule-fon-1920.png-min.png), linear-gradient(to bottom, var(--focus-white-color) 13.5%, #fff5f6 13.5%, #fff5f6 100%);
   }
@@ -2833,16 +2788,6 @@ button {
   transition: border-color var(--main-transition), box-shadow var(--main-transition);
   color: var(--focus-pinc-color);
 }
-.modal-franchise__input::-moz-placeholder {
-  font-weight: 700;
-  font-size: 13px;
-  color: rgba(212, 20, 68, 0.444);
-}
-.modal-franchise__input:-ms-input-placeholder {
-  font-weight: 700;
-  font-size: 13px;
-  color: rgba(212, 20, 68, 0.444);
-}
 .modal-franchise__input::placeholder {
   font-weight: 700;
   font-size: 13px;
@@ -2864,16 +2809,6 @@ button {
   border-radius: 10px;
   transition: border-color var(--main-transition), box-shadow var(--main-transition);
   color: var(--focus-pinc-color);
-}
-.modal-franchise__text-area::-moz-placeholder {
-  font-weight: 700;
-  font-size: 13px;
-  color: rgba(212, 20, 68, 0.444);
-}
-.modal-franchise__text-area:-ms-input-placeholder {
-  font-weight: 700;
-  font-size: 13px;
-  color: rgba(212, 20, 68, 0.444);
 }
 .modal-franchise__text-area::placeholder {
   font-weight: 700;
@@ -2981,8 +2916,7 @@ button {
 }
 .footer__link:hover, .footer__link:focus {
   background-color: var(--focus-pinc-color);
-  -webkit-animation: animate125 1000ms infinite 10ms;
-          animation: animate125 1000ms infinite 10ms;
+  animation: animate125 1000ms infinite 10ms;
 }
 .footer__icon-first {
   width: 19px;
@@ -3068,18 +3002,6 @@ button {
   .footer__copyright-text {
     line-height: 1.86;
     letter-spacing: 0.02em;
-  }
-}
-
-@-webkit-keyframes animate125 {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 

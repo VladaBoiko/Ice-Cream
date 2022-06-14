@@ -103,9 +103,9 @@ button {
 
 :root {
   --focus-pinc-color: #d41443;
-  --accent-salmon-color: #FFA5BA;
+  --accent-salmon-color: #ffa5ba;
   --text-black-color: black;
-  --text-gray-color: #907E82;
+  --text-gray-color: #907e82;
   --focus-white-color: #ffffff;
   --main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --bcg-pink-color: #ffb8ca;
@@ -114,63 +114,178 @@ button {
 }
 
 .header {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
   background-color: transparent;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-@media screen and (min-width: 1280px) {
-  .header {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-  }
 }
 
 .header-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  outline: 1px solid red;
 }
-
-@media screen and (max-width: 320px) {
-  .logo img {
-    width: 150px;
+@media screen and (min-width: 320px) {
+  .header-container {
+    padding-top: 8px;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding-top: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header-container {
+    padding-top: 37px;
+    justify-content: space-between;
   }
 }
 
-@media screen and (max-width: 1279px) {
-  .header-nav {
-    display: none;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .logo {
+    margin-right: auto;
   }
 }
 
-.menu-opener {
+.site-nav {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .site-nav {
+    display: block;
+  }
+}
+
+.header-nav {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-left: auto;
 }
 
+.header-nav__link {
+  font-weight: 700;
+  line-height: 1.31;
+  color: var(--focus-white-color);
+  text-decoration: none;
+  transition: color var(--main-transition);
+}
+.header-nav__link:hover, .header-nav__link:focus {
+  color: var(--focus-pinc-color);
+}
+
+.header-nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.header-button {
+  transition: background-color var(--main-transition);
+}
 @media screen and (max-width: 767px) {
   .header-button {
     display: none;
   }
 }
-
-.menu-modal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #E17992;
+@media screen and (min-width: 768px) {
+  .header-button {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 44px;
+    background-color: var(--focus-white-color);
+    border-radius: 22px;
+    font-weight: 700;
+    line-height: 1.31;
+    color: var(--focus-pinc-color);
+  }
 }
-@media screen and (min-width: 1279px) {
-  .menu-modal {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header-button {
+    margin-left: 32px;
+  }
+}
+.header-button:hover, .header-button:focus {
+  background-color: var(--white-btn-hover);
+}
+
+.header-button__icon {
+  fill: var(--focus-pinc-color);
+  margin-left: 12px;
+}
+
+.menu-open-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.menu-open-btn:hover .menu-open-icon, .menu-open-btn:focus .menu-open-icon {
+  stroke: var(--focus-white-color);
+}
+@media screen and (min-width: 1280px) {
+  .menu-open-btn {
     display: none;
   }
+}
+
+.menu-open-icon {
+  stroke: var(--focus-pinc-color);
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  stroke-width: 2.285;
+  transition: stroke var(--main-transition);
+}
+
+.mobile-menu {
+  position: fixed;
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 500;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.header-button {
+  transition: background-color var(--main-transition);
+}
+@media screen and (max-width: 767px) {
+  .header-button {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-button {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 44px;
+    background-color: var(--focus-white-color);
+    border-radius: 22px;
+    font-weight: 700;
+    line-height: 1.31;
+    color: var(--focus-pinc-color);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header-button {
+    margin-left: 32px;
+  }
+}
+.header-button:hover, .header-button:focus {
+  background-color: var(--white-btn-hover);
 }
 
 .header-backdrop {
@@ -591,7 +706,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .hero .container {
-    padding-top: 112px;
+    padding-top: 102px;
     padding-bottom: 190px;
   }
 }

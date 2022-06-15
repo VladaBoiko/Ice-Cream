@@ -149,43 +149,107 @@
 .products__item-ice::before {
   @media screen and (min-width: 200px) and (max-width: 319px) {
     background-image: url(../images/products/ice-cream/ice-cream-mobail-249-min.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-cream/ice-cream-mobail-498-min.png);
+    }
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    background-image: url(../images/products/ice-cream/ice-cream-mobail-498-min.png);
+    background-image: url(../images/products/ice-cream/ice-cream-mobail-249-min.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-cream/ice-cream-mobail-498-min.png);
+    }
   }
   @media screen and (min-width: 768px) {
-    background-image: url(../images/products/ice-cream/ice-cream-tablet-440-min.png);
+    background-image: url(../images/products/ice-cream/ice-cream-tablet-220-min.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-cream/ice-cream-tablet-440-min.png);
+    }
   }
   @media screen and (min-width: 1280px) {
-    background-image: url(../images/products/ice-cream/ice-cream-desctop-670-min.png);
+    background-image: url(../images/products/ice-cream/ice-cream-desctop-335-min.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-cream/ice-cream-desctop-670-min.png);
   }
 }
+}
+
 .products__item-coffee::before {
   @media screen and (min-width: 200px) and (max-width: 319px) {
     background-image: url(../images/products/ice-coffee/ice-coffee-mobail-249-min.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-coffee/ice-coffee-mobail-498-min.png);
   }
+  }
+
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    background-image: url(../images/products/ice-coffee/ice-coffee-mobail-498-min.png);
+    background-image: url(../images/products/ice-coffee/ice-coffee-mobail-249-min.png);
+     @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-coffee/ice-coffee-mobail-498-min.png);
   }
+  }
+
   @media screen and (min-width: 768px) {
-    background-image: url(../images/products/ice-coffee/ice-coffee-tablet-440-min.png);
+    background-image: url(../images/products/ice-coffee/ice-coffee-tablet-220-min.png);
+     @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-coffee/ice-coffee-tablet-440-min.png);
   }
+}
   @media screen and (min-width: 1280px) {
-    background-image: url(../images/products/ice-coffee/ice-coffee-desctop-674-min.png);
+    background-image: url(../images/products/ice-coffee/ice-coffee-desctop-337-min.png);
+ @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-coffee/ice-coffee-desctop-674-min.png);
   }
+}
 }
 .products__item-milkshake::before {
   @media screen and (min-width: 200px) and (max-width: 319px) {
     background-image: url(../images/products/millkshakes/milkshakes-mobail-249-min.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/millkshakes/milkshakes-mobail-498-min.png);
+  }
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    background-image: url(../images/products/millkshakes/milkshakes-mobail-498-min.png);
+    background-image: url(../images/products/millkshakes/milkshakes-mobail-249-min.png);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/millkshakes/milkshakes-mobail-498-min.png);
   }
+}
   @media screen and (min-width: 768px) {
-    background-image: url(../images/products/millkshakes/milkshakes-tablet-440-min.png);
+    background-image: url(../images/products/millkshakes/milkshakes-tablet-220-min.png);
+     @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/millkshakes/milkshakes-tablet-440-min.png);
+  }
+    
   }
   @media screen and (min-width: 1280px) {
-    background-image: url(../images/products/millkshakes/milkshakes-desctop-670-min.png);
+    background-image: url(../images/products/millkshakes/milkshakes-desctop-335-min.png);
+     @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/products/millkshakes/milkshakes-desctop-670-min.png);
+  }
   }
 }
 

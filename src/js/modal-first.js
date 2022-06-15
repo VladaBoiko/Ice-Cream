@@ -1,6 +1,5 @@
 (() => {
   const refs = {
-    // openHeaderModalMobileBtn: document.querySelector('.js-header-modal-open-mobile'),
     openHeaderModalBtn: document.querySelector('.js-header-modal-open'),
     
     closeHeaderModalBtn: document.querySelector('.js-header-modal-close'),
@@ -9,7 +8,6 @@
   };
 
   refs.openHeaderModalBtn.addEventListener('click', toggleHeaderModal);
-  // refs.openHeaderModalMobileBtn.addEventListener('click', toggleHeaderModal);
   refs.closeHeaderModalBtn.addEventListener('click', toggleHeaderModal);
 
   function toggleHeaderModal() {

@@ -1,4 +1,4 @@
-// const list = document.querySelector('.products__list');
+
 const flipButons = document.querySelectorAll('.products-info-btn');
 let cards = null;
 let card = null;

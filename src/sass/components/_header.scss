@@ -184,7 +184,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 254px;
+    width: 50vw;
     height: 100vh;
     padding: 60px 0px;
     background-color: #e17992;
@@ -192,7 +192,6 @@
     opacity: 0;
     transition: transform var(--main-transition), opacity var(--main-transition);
   }
-
   @media screen and (max-width: 480px) {
     width: 75vw;
     max-width: 254px;

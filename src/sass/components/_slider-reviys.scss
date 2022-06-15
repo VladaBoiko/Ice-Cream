@@ -18,7 +18,7 @@
   }
 }
 
-.slider3 {
+.slider-three {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     top: 52px;
   }
@@ -202,16 +202,16 @@
   margin-top: 0;
 }
 
-.slider3 .slick-dots {
+.slider-three .slick-dots {
   bottom: inherit;
 }
 
-.slider3 .slick-dots li {
+.slider-three .slick-dots li {
   width: 18px;
   height: 18px;
 }
 
-.slider3 .slick-dots li button {
+.slider-three .slick-dots li button {
   width: 12px;
   height: 12px;
   background-color: #d9d9d9;
@@ -219,7 +219,7 @@
   padding: 0;
 }
 
-.slider3 .slick-dots li button {
+.slider-three .slick-dots li button {
   width: 12px;
   height: 12px;
   background-color: #d9d9d9;
@@ -227,7 +227,7 @@
   padding: 0;
 }
 
-.slider3 .slick-dots .slick-active button {
+.slider-three .slick-dots .slick-active button {
   width: 12px;
   height: 12px;
   padding: 0;
@@ -239,14 +239,14 @@
   background-color: none;
 }
 
-.slider3 .slick-active button::before {
+.slider-three .slick-active button::before {
   display: none;
 }
 
-.slider3 .slick-dots {
+.slider-three .slick-dots {
   margin-top: 10px;
 }
 
-.slider3 .slick-dots li button::before {
+.slider-three .slick-dots li button::before {
   display: none;
 }
